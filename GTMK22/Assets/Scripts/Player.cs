@@ -5,11 +5,17 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public int health { get; private set; }
+    public int maxHealth { get; private set; }
     public int lives { get; private set; }
     public int money { get; private set; }
     public int maxDice { get; private set; }
     public List<Die> dice { get; private set; }
    
+    void start()
+    {
+    maxHealth = 100;
+    ChangeHealth(maxHealth);
+    }
 
     public bool ChangeHealth(int changeValue)
     {

@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
         
     }
 
-    public ChangeHealth(int changeValue)
+    public void ChangeHealth(int changeValue)
     {
         health += changeValue;
         if( health <= 0)

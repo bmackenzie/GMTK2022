@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class SceneManager : MonoBehaviour
+public class SceneLoader : MonoBehaviour
 {
 
     [SerializeField] private int numScenes;
@@ -15,7 +18,6 @@ public class SceneManager : MonoBehaviour
 
     public void LoadSpecificScene(string sceneName)
     {
-        SetLastIndex();
         SceneManager.LoadScene(sceneName);
     }
 }

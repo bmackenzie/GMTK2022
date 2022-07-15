@@ -8,16 +8,14 @@ public class Player : MonoBehaviour
     public int maxHealth { get; private set; }
     public int lives { get; private set; }
     public int money { get; private set; }
-    public int maxDice { get; private set; }
-    public List<Die> dice { get; private set; }
+    public int maxDice = 1;
+    public List<Die> dice;
    
     public void Awake()
     {
         maxHealth = 100;
         ChangeHealth(maxHealth);
-        Die firstDie = this.GetComponentInChildren<Die>();
-        maxDice = 1;
-        this.AddDie(firstDie, 0);
+
     }
     void Start()
     {

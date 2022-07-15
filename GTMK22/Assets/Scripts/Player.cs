@@ -11,10 +11,19 @@ public class Player : MonoBehaviour
     public int maxDice { get; private set; }
     public List<Die> dice { get; private set; }
    
-    void start()
+    public void Awake()
     {
-    maxHealth = 100;
-    ChangeHealth(maxHealth);
+        maxHealth = 100;
+        ChangeHealth(maxHealth);
+        Die firstDie = this.GetComponentInChildren<Die>();
+        maxDice = 1;
+        this.AddDie(firstDie, 0);
+    }
+    void Start()
+    {
+        //maxHealth = 100;
+        //ChangeHealth(maxHealth);
+        //dice.Add(new Die(4));
     }
 
     public bool ChangeHealth(int changeValue)

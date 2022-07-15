@@ -12,6 +12,12 @@ public class BattleManager : MonoBehaviour
     private int[] action;
     private bool isEnemyDead = false;
     private bool isPlayerDead = false;
+
+    private void Awake()
+    {
+        player = FindObjectOfType<Player>();
+        enemy = FindObjectOfType<Enemy>();
+    }
     void Start()
     {
         
@@ -40,7 +46,20 @@ public class BattleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(isPlayerDead || isEnemyDead)
+        {
+            FindObjectOfType<GameManager>().EndBattle(isEnemyDead);
+        }
+        if (playerTurn)
+        {
+            TakePlayerTurn();
+            playerTurn = false;
+        }
+        else
+        {
+            TakeEnemyTurn();
+            playerTurn = true;
+        }
     }
 
     void TakePlayerTurn()

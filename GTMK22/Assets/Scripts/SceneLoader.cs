@@ -18,6 +18,6 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadSpecificScene(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
     }
 }

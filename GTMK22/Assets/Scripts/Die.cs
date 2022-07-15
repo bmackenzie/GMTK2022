@@ -10,17 +10,15 @@ public class Die : MonoBehaviour
     
     
     // Start is called before the first frame update
-    void Start()
+    public void Awake()
     {
-        SetNumSides(6); // initialize die side number
-        sideAction = new int[numSides]; //fill sideAction w/ zeros
-        
+        SetNumSides(4);
     }
 
     public void SetNumSides(int sides)
     {
-        numSides = sides;   
-        return;
+        numSides = sides;
+        sideAction = new int[numSides]; //fill sideAction w/ zeros
     }
 
     public void ChangeSide(int side, int action)

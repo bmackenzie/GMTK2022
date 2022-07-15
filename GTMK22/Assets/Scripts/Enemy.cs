@@ -12,13 +12,16 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         // Initialize values for damage and health
-        
+        // for initial testing purposes
+        health = 20;
+        damage = 1;
+        Debug.Log("I am alive!");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        // used for animations and the like
     }
 
     public int TakeAction()
@@ -26,4 +29,18 @@ public class Enemy : MonoBehaviour
         // TODO: Do action
         return -1;
     }
+
+    public bool DealDamage(int incoming_damage)
+    {
+        health -= incoming_damage;
+        if (health <= 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
 }

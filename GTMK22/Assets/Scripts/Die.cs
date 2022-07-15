@@ -21,6 +21,18 @@ public class Die : MonoBehaviour
         
     }
 
+    public void ChangeSide(int side, int action)
+    {
+        // TODO: Update side and action
+        return;
+    }
+
+    public int RollDie()
+    {
+        // TODO: Get a side action and return it?
+        return -1;
+    }
+
     void Merge(Die secondDie, Die thirdDie)
     {
         // TODO: Maybe merging?

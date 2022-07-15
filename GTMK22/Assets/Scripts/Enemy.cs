@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public int damage { get; private set; }
     public int health { get; private set; }
+
     //TODO: Maybe add special abilities
 
     // Start is called before the first frame update
@@ -24,10 +25,10 @@ public class Enemy : MonoBehaviour
         // used for animations and the like
     }
 
-    public int TakeAction()
+    public int TakeTurn()
     {
-        // TODO: Do action
-        return -1;
+        // TODO: Do your turn
+        return damage;
     }
 
     public bool DealDamage(int incoming_damage)

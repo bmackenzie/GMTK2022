@@ -12,6 +12,8 @@ public class BattleManager : MonoBehaviour
     private int[] action;
     private bool isEnemyDead = false;
     private bool isPlayerDead = false;
+
+
     void Start()
     {
         

@@ -12,15 +12,9 @@ public class Die : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SetNumSides(6);
-        sideAction = new int[numSides];
+        SetNumSides(6); // initialize die side number
+        sideAction = new int[numSides]; //fill sideAction w/ zeros
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        return;
     }
 
     public void SetNumSides(int sides)
@@ -31,14 +25,19 @@ public class Die : MonoBehaviour
 
     public void ChangeSide(int side, int action)
     {
-        // TODO: Update side and action
-        sideAction[side] = action;
+        if (side > 0 && side <= numSides )
+        {
+            sideAction[side] = action;
+        }
+        else
+        {
+            Debug.Log("Side does not exist on die");
+        }
         return;
     }
 
     public int[] RollDie()
     {
-        // TODO: Get a side action and return it?
         int currentFace = Random.Range(0, numSides-1);
         int currentAction = sideAction[currentFace];
         return new int[] {currentFace, currentAction};

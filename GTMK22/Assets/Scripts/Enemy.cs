@@ -32,7 +32,10 @@ public class Enemy : MonoBehaviour
 
         return new int[] {damage, 0};
     }
-
+    public bool DealDamage(int something)
+    {
+        return false;
+    }
     public bool ChangeHealth(int healthChange)
     {
         health += healthChange;

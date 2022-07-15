@@ -212,8 +212,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cace8ece5abb75a43a4110d6bb839f15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBarImage: {fileID: 129267598}
+  playerHealthBarImage: {fileID: 0}
+  enemyHealthBarImage: {fileID: 0}
   player: {fileID: 240719096}
+  enemy: {fileID: 0}
 --- !u!1 &165282132
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,6 +438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 490366388}
   - component: {fileID: 490366390}
+  - component: {fileID: 490366391}
   - component: {fileID: 490366389}
   m_Layer: 5
   m_Name: EnemyHealthBar
@@ -503,6 +506,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490366387}
   m_CullTransparentMesh: 1
+--- !u!114 &490366391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490366387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cace8ece5abb75a43a4110d6bb839f15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealthBarImage: {fileID: 0}
+  enemyHealthBarImage: {fileID: 0}
+  player: {fileID: 0}
+  enemy: {fileID: 0}
 --- !u!1 &1019257127
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,6 +532,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1019257128}
   - component: {fileID: 1019257130}
+  - component: {fileID: 1019257131}
   - component: {fileID: 1019257129}
   m_Layer: 5
   m_Name: PlayerHealthBar
@@ -580,6 +600,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1019257127}
   m_CullTransparentMesh: 1
+--- !u!114 &1019257131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019257127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cace8ece5abb75a43a4110d6bb839f15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealthBarImage: {fileID: 0}
+  enemyHealthBarImage: {fileID: 0}
+  player: {fileID: 0}
+  enemy: {fileID: 0}
 --- !u!1 &1414905446
 GameObject:
   m_ObjectHideFlags: 0

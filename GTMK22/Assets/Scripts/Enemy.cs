@@ -5,8 +5,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int damage { get; protected set; }
-    public int health { get; protected set; }
-
+    public int health { get; protected set; } = 0;
+    public int maxHealth { get; private set; }
     //TODO: Maybe add special abilities
 
     // Start is called before the first frame update
@@ -14,9 +14,10 @@ public class Enemy : MonoBehaviour
     {
         // Initialize values for damage and health
         // for initial testing purposes
-        health = 20;
+        maxHealth = 20;
+        ChangeHealth(maxHealth);
         damage = 1;
-        Debug.Log("I am alive!");
+        
     }
 
     // Update is called once per frame
@@ -32,9 +33,9 @@ public class Enemy : MonoBehaviour
         return new int[] {damage, 0};
     }
 
-    public bool DealDamage(int incomingDamage)
+    public bool ChangeHealth(int healthChange)
     {
-        health -= incomingDamage;
+        health += healthChange;
         if (health <= 0)
         {
             return true;

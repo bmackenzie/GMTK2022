@@ -13,11 +13,13 @@ public class BattleManager : MonoBehaviour
     private bool isEnemyDead = false;
     private bool isPlayerDead = false;
 
+
     private void Awake()
     {
         player = FindObjectOfType<Player>();
         enemy = FindObjectOfType<Enemy>();
     }
+
     void Start()
     {
         

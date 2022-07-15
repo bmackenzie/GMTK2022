@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Scaling : Enemy
+public class EnemyScaling : Enemy
 {
     private int scaleFactor = 5;
     private int scaleCount = 0;
@@ -17,7 +17,7 @@ public class Enemy_Scaling : Enemy
         }
         else
         {
-            return new int[] { 0, damage };
+            return new int[] { damage, 0 };
         }
         
     }

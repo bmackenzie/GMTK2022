@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public int damage { get; private set; }
-    public int health { get; private set; }
+    public int damage { get; protected set; }
+    public int health { get; protected set; }
 
     //TODO: Maybe add special abilities
 
@@ -25,15 +25,16 @@ public class Enemy : MonoBehaviour
         // used for animations and the like
     }
 
-    public int TakeTurn()
+    public int[] TakeTurn()
     {
         // TODO: Do your turn
-        return damage;
+
+        return new int[] {damage, 0};
     }
 
-    public bool DealDamage(int incoming_damage)
+    public bool DealDamage(int incomingDamage)
     {
-        health -= incoming_damage;
+        health -= incomingDamage;
         if (health <= 0)
         {
             return true;

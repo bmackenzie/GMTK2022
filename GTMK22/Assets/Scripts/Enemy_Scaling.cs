@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class Enemy_Scaling : Enemy
 {
-    private int scale_factor = 5;
-    private int scale_count = 0;
-    public int TakeTurn()
+    private int scaleFactor = 5;
+    private int scaleCount = 0;
+    public int[] TakeTurn()
     {
         // TODO: Do your turn
-        scale_count++;
-        if (scale_count%scale_factor == 0)
+        scaleCount++;
+        if (scaleCount%scaleFactor == 0)
         {
             damage++;
-            return 0;
+            return new int[] { 0, 0 };
         }
         else
         {
-            return damage;
+            return new int[] { 0, damage };
         }
         
     }

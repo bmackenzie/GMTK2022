@@ -11,12 +11,17 @@ public class Player : MonoBehaviour
     public List<Die> dice { get; private set; }
    
 
-    public void ChangeHealth(int changeValue)
+    public bool ChangeHealth(int changeValue)
     {
         health += changeValue;
         if( health <= 0)
         {
             PlayerDeath();
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 

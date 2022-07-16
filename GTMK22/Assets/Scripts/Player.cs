@@ -93,6 +93,7 @@ public class Player : MonoBehaviour
     public void GameOver()
     {
         //call sceneloader to load gameover scene
+        FindObjectOfType<SceneLoader>().LoadSpecificScene("GameOver");
     }
 
     public void PlayerDeath()

@@ -130,4 +130,10 @@ public class BattleManager : DialoguePauser
             isEnemyDead = enemy.ChangeHealth(-player.thornStrength);
         }
     }
+
+    void EndFight()
+    {
+        //clean up fight, move to next scene
+        FindObjectOfType<SceneLoader>().LoadSpecificScene("shop");
+    }
 }

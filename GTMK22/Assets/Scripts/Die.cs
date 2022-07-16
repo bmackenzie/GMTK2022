@@ -27,7 +27,7 @@ public class Die : MonoBehaviour
             sideBonuses[i] = new BonusGoop((BonusTypes)0, 0, "nothing fancy");
         }
         // Randomly set a single side with a random bonus
-        sideBonuses[Random.Range(0, numSides - 1)] = new BonusGoop((BonusTypes)0, 0, "nothing fancy");//DieLibrary.GetRandomGoop();
+        sideBonuses[Random.Range(0, numSides - 1)] = new BonusGoop((BonusTypes)0, 0, "nothing fancy"); //DieLibrary.GetRandomGoop();
 
     }
 

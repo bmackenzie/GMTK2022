@@ -6,24 +6,22 @@ using UnityEditor;
 
 public class GameManager : MonoBehaviour
 {
+    public TextAsset jsonFile;
     public DialogueRunner dialogueRunner;
     public SceneLoader sceneLoader;
     public Player playerPrefab;
     public Player player;
-
+    public static string jsonthing;
     public int rounds { get; private set; }
 
-
+    [MenuItem("AssetDatabase/LoadAssetExample")]
     private void Awake()
     {
         this.dialogueRunner = this.GetComponentInChildren<DialogueRunner>();
         this.sceneLoader = this.GetComponent<SceneLoader>();
-        //AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/JsonData/DieFaces.json").text
-        //public DieDatabase DieLibrary = DieDatabase.CreateFromJSON();
         rounds = 1;
+    ///jsonthing = (string)AssetDatabase.LoadAssetAtPath("Assets/JsonData/DieFaces.json", typeof(string));
     }
-        
-
 
     // Start is called before the first frame update
     void Start()

@@ -1,0 +1,124 @@
+{
+    "effects": [
+
+        {
+            "name": "Poison",
+            "caseNum": "1",
+            "description": "Add {magnitude} poison to the enemy",
+            "magnitudes": [
+                {
+                    "dieRelation": "0",
+                    "value": "3",
+                    "description": "3"
+                },
+                {
+                    "dieRelation": "1",
+                    "value": "1",
+                    "description": "die value"
+                }
+            ]
+        },
+        {
+            "name": "Thorn",
+            "caseNum": "2",
+            "description": "Deal {magnitude} more damage when you are hit for the rest of the fight",
+            "magnitudes": [
+                {
+                    "dieRelation": "0",
+                    "value": "2",
+                    "description": "2"
+                },
+                {
+                    "dieRelation": "1",
+                    "value": "0.5",
+                    "description": "die value/2 (rounded down)"
+                }
+            ]
+        },
+        {
+            "name": "Damage Reduction",
+            "caseNum": "3",
+            "description": "Reduce the damage of the next attack by {magnitude}",
+            "magnitudes": [
+                {
+                    "dieRelation": "0",
+                    "value": "2",
+                    "description": "2"
+                },
+                {
+                    "dieRelation": "1",
+                    "value": "1",
+                    "description": "die value/2 (rounded down)"
+                }
+            ]
+        },
+        {
+            "name": "Dodge",
+            "caseNum": "4",
+            "description": "Avoid the next {magnitude} hit completely",
+            "magnitudes": [
+                {
+                    "dieRelation": "0",
+                    "value": "2",
+                    "description": "2"
+                },
+                {
+                    "dieRelation": "1",
+                    "value": "1",
+                    "description": "die value/3 (rounded down)"
+                }
+            ]
+        },
+        {
+            "name": "Stun",
+            "caseNum": "5",
+            "description": "Deal {magnitude} additional damage, but skip your next turn",
+            "magnitudes": [
+                {
+                    "dieRelation": "0",
+                    "value": "8",
+                    "description": "8"
+                },
+                {
+                    "dieRelation": "1",
+                    "value": "1",
+                    "description": "die value x 3"
+                }
+            ]
+        },
+        {
+            "name": "Strength",
+            "caseNum": "6",
+            "description": "Deal {magnitude} more damage with every hit",
+            "magnitudes": [
+                {
+                    "dieRelation": "0",
+                    "value": "2",
+                    "description": "2"
+                },
+                {
+                    "dieRelation": "1",
+                    "value": "1/2",
+                    "description": "die value/2 (rounded down)"
+                }
+            ]
+        },
+        {
+            "name": "MultiAttack",
+            "caseNum": "7",
+            "description": "Deal dice damage {magnitude}",
+            "magnitudes": [
+                {
+                    "dieRelation": "0",
+                    "value": "1",
+                    "description": "twice this turn"
+                },
+                {
+                    "dieRelation": "1",
+                    "value": "2",
+                    "description": "- 2 three times this turn"
+                }
+            ]
+        }
+    ]
+}

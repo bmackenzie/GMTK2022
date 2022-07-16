@@ -7,13 +7,13 @@ public class Die : MonoBehaviour
     public int numSides = 4;
     public int[][] sideAction { get; private set; }
     public BonusGoop[] sideBonuses { get; private set; }
-
-    
+    public SpriteRenderer slimeSprite;
     
     // Start is called before the first frame update
     public void Awake()
     {
         SetNumSides(numSides);
+        this.slimeSprite = this.gameObject.GetComponent<SpriteRenderer>();
     }
 
     public void SetNumSides(int sides)

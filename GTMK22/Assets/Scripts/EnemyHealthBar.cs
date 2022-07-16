@@ -9,6 +9,12 @@ public class EnemyHealthBar : MonoBehaviour
     public Image healthBarImage;
     public Enemy enemy;
 
+    
+    private void Awake()
+    {
+        enemy = FindObjectOfType<Enemy>();
+    }
+
 
     public void Update() 
     {

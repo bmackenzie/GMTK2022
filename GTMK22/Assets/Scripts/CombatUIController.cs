@@ -11,6 +11,7 @@ public class CombatUIController : MonoBehaviour
     public Player player;
     public Enemy enemy;
     public GameObject lifesPrefab;
+    public GameObject dicePrefab;
 
     private void Awake()
     {
@@ -32,8 +33,8 @@ public class CombatUIController : MonoBehaviour
         for(int die=1;die <= player.dice.Count; die++)
         {
             Debug.Log("Dice: " + die.ToString());
-            //GameObject dieSlimes = GameObject.Instantiate(Resources.Load("Die")) as GameObject;
-            //dieSlimes.transform.position += new Vector3(1*die, 0, 0);
+            GameObject diceIcon = Instantiate(dicePrefab);
+            diceIcon.transform.position += new Vector3((float)((die-1)*1.25), 0.0f, 0.0f);
         }
     }
 

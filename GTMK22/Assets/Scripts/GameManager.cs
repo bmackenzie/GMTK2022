@@ -11,13 +11,14 @@ public class GameManager : MonoBehaviour
     public Player player;
 
     public int rounds { get; private set; }
-    
+
 
     private void Awake()
     {
         this.dialogueRunner = this.GetComponentInChildren<DialogueRunner>();
         this.sceneLoader = this.GetComponent<SceneLoader>();
-        rounds = 0;
+        
+        rounds = 1;
     }
 
     // Start is called before the first frame update
@@ -39,7 +40,7 @@ public class GameManager : MonoBehaviour
         // instantiate a player
 
         this.player = Instantiate(playerPrefab);
-        //this.dialogueRunner.StartDialogue("Start");
+        this.dialogueRunner.StartDialogue("Start");
         // TODO: Add a name input?
         this.StartBattle();
     }

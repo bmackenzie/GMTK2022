@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BattleManager : MonoBehaviour
+public class BattleManager : DialoguePauser
 {
     // Start is called before the first frame update
     private bool playerTurn = true;
@@ -48,7 +48,10 @@ public class BattleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(this.isPaused)
+        {
+            return;
+        }
         if (isPlayerDead || isEnemyDead)
         {
             FindObjectOfType<GameManager>().EndBattle(isEnemyDead);

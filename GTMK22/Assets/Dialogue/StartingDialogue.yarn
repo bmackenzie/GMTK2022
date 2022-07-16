@@ -13,7 +13,32 @@ Goblin Slime-uner: I'm a wizard too!!
 Goblin Slime-uner: Gonna put my name in the cauldron and beat those jerks at their own tourney!
 ===
 
-title: SecondDialog
+title: Round1End
+tags:
+---
+Goblin Slime-uner: Haha! I showed you!
+Goblin Slime-uner: Oooooh, your little pets left something behind!
+Goblin Slime-uner: Better not grab too much though or they might get suspicious...
+Goblin Slime-uner: I bet this will fit on one of my gizmos...
+===
+
+title: Round2End
+tags:
+---
+Goblin Slime-uner: Haha! I showed you!
+Goblin Slime-uner: Oooooh, your little pets left something behind!
+Goblin Slime-uner: I bet this will fit on one of my gizmos...
+===
+
+title: Round3End
+tags:
+---
+Goblin Slime-uner: Haha! I showed you!
+Goblin Slime-uner: Oooooh, your little pets left something behind!
+Goblin Slime-uner: I bet this will fit on one of my gizmos...
+===
+
+title: Round4End
 tags:
 ---
 Goblin Slime-uner: Haha! I showed you!
@@ -25,7 +50,9 @@ title: LoseDialog
 tags:
 ---
 <<if $notDied == true>>
-    Goblin Slime-uner: Gooood, my timeshift doo-dad got me out of that close loss!
-    Goblin Slime-uner: Let's try that again!
+    Goblin Slime-uner: Gooood, my single-use timeshift doo-dad got me out of that close loss!
+    Goblin Slime-uner: Gotta re-assess before trying that geezer again...
+    <<set $notDied to false>>
 <<endif>>
+Goblin Slime-uner: Let's try that again!
 ===

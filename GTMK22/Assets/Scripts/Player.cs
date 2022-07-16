@@ -6,7 +6,8 @@ public class Player : MonoBehaviour
 {
     public int health { get; private set; }
     public int maxHealth { get; private set; }
-    public int lives { get; private set; }
+    public int lives = 3;
+    public int maxLives { get; private set; }
     public int money { get; private set; }
 
     public int maxDice = 3;
@@ -16,10 +17,11 @@ public class Player : MonoBehaviour
 
     public void Awake()
     {
-        lives = 6;
         money = 0;
         maxHealth = 100;
+        maxLives = 6;
         ChangeHealth(maxHealth);
+        //ChangeLives(maxLives);
         // Pick up a random starting bit
         this.bits.Add(new BonusGoop(Random.Range(1,5)));
 

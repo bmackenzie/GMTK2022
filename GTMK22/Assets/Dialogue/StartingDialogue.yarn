@@ -19,3 +19,10 @@ Goblin Slime-uner: Haha! I showed you!
 Goblin Slime-uner: Oooooh, your little pets left something behind!
 Goblin Slime-uner: I bet this will fit on one of my gizmos...
 ===
+
+title: LoseDialog
+tags:
+---
+<<if notDied == True>>
+
+===

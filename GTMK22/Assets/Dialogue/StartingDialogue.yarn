@@ -24,5 +24,7 @@ title: LoseDialog
 tags:
 ---
 <<if notDied == True>>
-
+    Goblin Slime-uner: Gooood, my timeshift doo-dad got me out of that close loss!
+    Goblin Slime-uner: Let's try that again!
+<<endif>>
 ===

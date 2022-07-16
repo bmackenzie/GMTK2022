@@ -67,11 +67,13 @@ public class BattleManager : MonoBehaviour
     void TakePlayerTurn()
     {
         action = player.dice[dieNumber].RollDie();
-        isEnemyDead = enemy.DealDamage(action[0]);
+        isEnemyDead = enemy.ChangeHealth(-action[0]);
         switch (action[1])
         {
             case 0:
+                enemy.ChangePoison(action[2]);
                 Debug.Log("Poison placeholder!");
+                enemy.ChangeHealth(-enemy.poisonCounter);
                 // code block
                 break;
             case 1:
@@ -83,7 +85,10 @@ public class BattleManager : MonoBehaviour
                 Debug.Log("No fancy status placeholder");
                 break;
         }
-
+        if (enemy.poisonCounter > 0)
+        {
+            enemy.ChangePoison(-1);
+        }
     }
 
     void TakeEnemyTurn()
@@ -93,7 +98,9 @@ public class BattleManager : MonoBehaviour
         switch (action[1])
         {
             case 0:
+                player.ChangePoison(action[2]);
                 Debug.Log("Poison from enemy placeholder");
+                player.ChangeHealth(-player.poisonCounter);
                 // code block
                 break;
             case 1:
@@ -104,6 +111,10 @@ public class BattleManager : MonoBehaviour
                 // code block
                 Debug.Log("No fancy status from enemy placeholder");
                 break;
+        }
+        if (player.poisonCounter > 0)
+        {
+            player.ChangePoison(-1);
         }
     }
 }

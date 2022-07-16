@@ -10,11 +10,13 @@ public class Player : MonoBehaviour
     public int money { get; private set; }
     public int maxDice = 1;
     public List<Die> dice;
-   
+    public int poisonCounter { get; private set; }
+
     public void Awake()
     {
         maxHealth = 100;
         ChangeHealth(maxHealth);
+        poisonCounter = 0;
 
     }
     void Start()
@@ -91,5 +93,10 @@ public class Player : MonoBehaviour
         //TODO: DIE DIE DIE DIE
         ChangeLives(-1);
         return;
+    }
+
+    public void ChangePoison(int poison)
+    {
+        poisonCounter += poison;
     }
 }

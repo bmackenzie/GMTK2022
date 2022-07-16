@@ -13,7 +13,7 @@ public class BattleManager : DialoguePauser
     private bool isEnemyDead = false;
     private bool isPlayerDead = false;
     private int updateFlag = 0;
-    private int updateSpeed = 1000;
+    public int updateSpeed = 1;
 
     private int enemyPoison = 0;
     private int enemyThorn = 0;
@@ -70,7 +70,7 @@ public class BattleManager : DialoguePauser
             return;
         }
         
-        if(updateFlag < updateSpeed)
+        if(updateFlag < (1000 / updateSpeed))
         {
             updateFlag++;
             return;

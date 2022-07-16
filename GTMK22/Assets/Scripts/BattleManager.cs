@@ -12,6 +12,8 @@ public class BattleManager : DialoguePauser
     private int[] action;
     private bool isEnemyDead = false;
     private bool isPlayerDead = false;
+    private int updateFlag = 0;
+    private int updateSpeed = 1000;
 
 
     private void Awake()
@@ -52,6 +54,13 @@ public class BattleManager : DialoguePauser
         {
             return;
         }
+        
+        if(updateFlag < updateSpeed)
+        {
+            updateFlag++;
+            return;
+        }
+        updateFlag = 0;
         if (isPlayerDead || isEnemyDead)
         {
             FindObjectOfType<GameManager>().EndBattle(isEnemyDead);

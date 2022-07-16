@@ -2,57 +2,109 @@
 tags:
 ---
 <<set $notDied to true>>
-Goblin Slime-uner: How dare they not invite me to the tourney??
-Goblin Slime-uner: I'm a wizard too!!
+<<set $lootIntro to true>>
+<<set $editIntro to true>>
+<<set $currentRound to 1>>
+Fork: How dare they not invite me to the tourney??
+Fork: I'm a wizard too!! I'm the mighty slime-uner!
 
 -> I'll show them how powerful I am!
-    Goblin Slime-uner: Those gizmos I found should knock those geezers in bathrobes off their game!
+    Fork: Those gizmos I found should knock those geezers in bathrobes off their game!
 -> I need to give myself some sort of edge...
-    Goblin Slime-uner: Maybe I can add those gizmos I found to my creature summoning for an extra boost...
+    Fork: Maybe I can add those gizmos I found to my creature summoning for an extra boost...
 
-Goblin Slime-uner: Gonna put my name in the cauldron and beat those jerks at their own tourney!
+Fork: Gonna put my name in the cauldron and beat those jerks at their own tourney!
+===
+
+title: BattleEnd
+tags: 
+---
+<<if $currentRound == 1>>
+    [[Round1End]]
+<<elseif $currentRound == 2>>
+    [[Round2End]]
+<<elseif $currentRound == 4>>
+    [[Round4End]]
+<<elseif $currentRound == 8>>
+    [[Round8End]]
+<<elseif $currentRound == 9>>
+    [[Round9End]]
+<<elseif $currentRound == 10>>
+    [[Round10End]]
+<<else>>
+    <<set $currentRound to $currentRound + 1>>
+<<endif>>
+===
+
+title: LootStart
+tags: 
+---
+<<if $lootIntro == true>>
+    Fork: Oooooh, your little pets left something behind!
+    Fork: Better not grab too much though or they might get suspicious...
+    <<set $lootIntro = false>>
+<<endif>>
+===
+
+title: SetupStart
+tags: 
+---
+<<if $editIntro == true>>
+    Fork: I bet these bits of goop I found will fit on my gizmo...
+    <<set $editIntro = false>>
+<<endif>>
 ===
 
 title: Round1End
 tags:
 ---
-Goblin Slime-uner: Haha! I showed you!
-Goblin Slime-uner: Oooooh, your little pets left something behind!
-Goblin Slime-uner: Better not grab too much though or they might get suspicious...
-Goblin Slime-uner: I bet this will fit on one of my gizmos...
+Fork: Haha! Take that, beardy!
+<<set $currentRound to $currentRound + 1>>
 ===
+
 
 title: Round2End
 tags:
 ---
-Goblin Slime-uner: Haha! I showed you!
-Goblin Slime-uner: Oooooh, your little pets left something behind!
-Goblin Slime-uner: I bet this will fit on one of my gizmos...
-===
-
-title: Round3End
-tags:
----
-Goblin Slime-uner: Haha! I showed you!
-Goblin Slime-uner: Oooooh, your little pets left something behind!
-Goblin Slime-uner: I bet this will fit on one of my gizmos...
+Fork: Yes! I think I'm getting the hang of these gizmos
+Swole-d Man In Robes: You're surprisingly strong for such a tiny creature.
+<<set $currentRound to $currentRound + 1>>
 ===
 
 title: Round4End
 tags:
 ---
-Goblin Slime-uner: Haha! I showed you!
-Goblin Slime-uner: Oooooh, your little pets left something behind!
-Goblin Slime-uner: I bet this will fit on one of my gizmos...
+Fork: Haha! I showed you!
+<<set $currentRound to $currentRound + 1>>
+===
+
+title: Round8End
+tags:
+---
+Fork: Haha! I showed you!
+<<set $currentRound to $currentRound + 1>>
+===
+
+title: Round9End
+tags:
+---
+Fork: Haha! I showed you!
+<<set $currentRound to $currentRound + 1>>
+===
+
+title: Round10End
+tags:
+---
+Fork: Haha! I showed you!
+<<set $currentRound to $currentRound + 1>>
 ===
 
 title: LoseDialog
 tags:
 ---
 <<if $notDied == true>>
-    Goblin Slime-uner: Gooood, my single-use timeshift doo-dad got me out of that close loss!
-    Goblin Slime-uner: Gotta re-assess before trying that geezer again...
+    Fork: Gooood, my single-use timeshift doo-dad got me out of that close loss!
+    Fork: Gotta re-assess before trying that geezer again...
     <<set $notDied to false>>
 <<endif>>
-Goblin Slime-uner: Let's try that again!
 ===

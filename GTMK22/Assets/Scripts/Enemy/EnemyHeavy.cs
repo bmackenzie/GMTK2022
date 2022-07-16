@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHeavy : MonoBehaviour
+public class EnemyHeavy : Enemy
 {
     // Start is called before the first frame update
-    void Start()
+    public override void Start()
     {
-        
+        damage = 4;
+        health = 100;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

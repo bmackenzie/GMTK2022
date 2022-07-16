@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyHeavy : Enemy
 {
     // Start is called before the first frame update
-    void override Start()
+    public override void Start()
     {
         damage = 4;
         health = 100;

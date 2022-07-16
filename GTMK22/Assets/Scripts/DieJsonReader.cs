@@ -1,1 +1,0 @@
-public static DieDatabase DieLibrary = DieDatabase.CreateFromJSON(AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/JsonData/DieFaces.json").text);

@@ -15,13 +15,14 @@ public class GameManager : MonoBehaviour
     {
         this.dialogueRunner = this.GetComponentInChildren<DialogueRunner>();
         this.sceneLoader = this.GetComponent<SceneLoader>();
+        
     }
 
     // Start is called before the first frame update
     void Start()
     {
         // Setup a splash screen
-       
+        this.StartGame();
     }
 
     // Update is called once per frame
@@ -38,7 +39,7 @@ public class GameManager : MonoBehaviour
         this.player = Instantiate(playerPrefab);
         this.dialogueRunner.StartDialogue("Start");
         // TODO: Add a name input?
-        
+        this.StartBattle();
     }
 
     public void StartBattle()

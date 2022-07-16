@@ -15,9 +15,12 @@ public class Player : MonoBehaviour
 
     public void Awake()
     {
+        lives = 6;
+        money = 0;
         maxHealth = 100;
         ChangeHealth(maxHealth);
         poisonCounter = 0;
+        
 
     }
     void Start()

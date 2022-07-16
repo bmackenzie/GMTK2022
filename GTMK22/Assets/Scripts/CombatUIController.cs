@@ -10,7 +10,7 @@ public class CombatUIController : MonoBehaviour
     public Image playerLivesIcon;
     public Player player;
     public Enemy enemy;
-    public GameObject gameobject;
+    public GameObject lifesPrefab;
 
     private void Awake()
     {
@@ -19,30 +19,33 @@ public class CombatUIController : MonoBehaviour
         //gameObject = FindObjectOfType<GameObject>();
     }
 
-    public void CreateObject(string prefabName) 
-    {
+    public void Start() 
+    {   
+        Debug.Log("started controller");
         for(int lvs=1;lvs <= player.lives; lvs++)
         {
-            GameObject lifeIcon = GameObject.Instantiate(Resources.Load("LivesIcon")) as GameObject;
-            lifeIcon.transform.position += new Vector3(10*lvs, 0, 0);
+            Debug.Log("Lives: " + lvs.ToString());
+            GameObject lifeIcon = Instantiate(lifesPrefab);
+            lifeIcon.transform.position += new Vector3((lvs-1)*1, 0, 0);
         }
-    
+        
+        for(int die=1;die <= player.dice.Count; die++)
+        {
+            Debug.Log("Dice: " + die.ToString());
+            //GameObject dieSlimes = GameObject.Instantiate(Resources.Load("Die")) as GameObject;
+            //dieSlimes.transform.position += new Vector3(1*die, 0, 0);
+        }
     }
 
     public void UpdateHealthBar()
     {
-        playerHealthBarImage.fillAmount = Mathf.Clamp(player.health / player.maxHealth, 0, 1f);
-        enemyHealthBarImage.fillAmount = Mathf.Clamp(enemy.health / enemy.maxHealth, 0, 1f);
+        // playerHealthBarImage.fillAmount = Mathf.Clamp(player.health / player.maxHealth, 0, 1f);
+        // enemyHealthBarImage.fillAmount = Mathf.Clamp(enemy.health / enemy.maxHealth, 0, 1f);
     }
 
     public void UpdateRoundNumber()
     {
         return;
-    }
-
-    public void UpdateLivesIcons()
-    {
-        CreateObject("LiveIcon");
     }
 
 }

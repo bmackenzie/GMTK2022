@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     public int damage { get; protected set; }
     public int health { get; protected set; } = 0;
     public int maxHealth { get; private set; }
+    public int summons = 3;
 
     //TODO: Maybe add special abilities
 

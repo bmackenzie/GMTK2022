@@ -819,8 +819,10 @@ MonoBehaviour:
   battleManager: {fileID: 0}
   lifesPrefab: {fileID: 5691939136125180860, guid: e64e61c1edb08b34f9a7cce7ff2bb150, type: 3}
   dicePrefab: {fileID: 4224788643794358903, guid: a04e855fda64fb9438ffeac8ffc6b61e, type: 3}
+  enemySummonsPrefab: {fileID: 4224788643794358903, guid: 223a54abb34acf445b9bdd580f08dd25, type: 3}
   lifeIcon: {fileID: 0}
   diceIcon: {fileID: 0}
+  enemyIcon: {fileID: 0}
 --- !u!4 &1106971488
 Transform:
   m_ObjectHideFlags: 0
@@ -1172,6 +1174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29030cba68b134e409581c94b475d569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  summons: 3
 --- !u!4 &1602747265
 Transform:
   m_ObjectHideFlags: 0

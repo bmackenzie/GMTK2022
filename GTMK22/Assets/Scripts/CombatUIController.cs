@@ -2,25 +2,45 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using System;
 
 public class CombatUIController : MonoBehaviour
 {
-    public Image playerHealthBarImage;
-    public Image enemyHealthBarImage;
     public Image playerLivesIcon;
-    public Player player;
-    public Enemy enemy;
+    private Player player;
+    private Enemy enemy;
+    public TextMeshProUGUI roundText;
+    public TextMeshProUGUI speedText;
+    public GameManager gameManager;
+    public BattleManager battleManager;
     public GameObject lifesPrefab;
     public GameObject dicePrefab;
+    public GameObject lifeIcon;
+    public GameObject diceIcon;
+    private int[] speeds = {1,2,4};
+    private int speedIndex = -1;
+    
 
     private void Awake()
     {
         player = FindObjectOfType<Player>();
         enemy = FindObjectOfType<Enemy>();
-        //gameObject = FindObjectOfType<GameObject>();
+        gameManager = FindObjectOfType<GameManager>();
+        battleManager = FindObjectOfType<BattleManager>();
     }
 
     public void Start() 
+    {
+        DrawLives();
+        DrawDie();
+        UpdateRoundNumber();
+        UpdateSpeedNumber();
+        
+    }
+
+    
+    public void DrawLives()
     {   
         //Debug.Log("started controller");
         for(int lvs=1;lvs <= player.lives; lvs++)
@@ -29,7 +49,10 @@ public class CombatUIController : MonoBehaviour
             GameObject lifeIcon = Instantiate(lifesPrefab);
             lifeIcon.transform.position += new Vector3((lvs-1)*1, 0, 0);
         }
+    }
         
+    public void DrawDie()
+    {
         for(int die=1;die <= player.dice.Count; die++)
         {
             //Debug.Log("Dice: " + die.ToString());
@@ -38,14 +61,18 @@ public class CombatUIController : MonoBehaviour
         }
     }
 
-    public void UpdateHealthBar()
-    {
-        // playerHealthBarImage.fillAmount = Mathf.Clamp(player.health / player.maxHealth, 0, 1f);
-        // enemyHealthBarImage.fillAmount = Mathf.Clamp(enemy.health / enemy.maxHealth, 0, 1f);
-    }
-
     public void UpdateRoundNumber()
     {
+        roundText.text = "Round " + gameManager.rounds.ToString();
+        return;
+    }
+
+    public void UpdateSpeedNumber()
+    {
+        speedIndex ++;
+        Debug.Log("Dice: " + die.ToString());
+        speedText.text = speeds[speedIndex].ToString() + "X";
+        battleManager.updateSpeed = speeds[speedIndex];
         return;
     }
 

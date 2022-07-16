@@ -21,9 +21,9 @@ public class Player : MonoBehaviour
     }
     void Start()
     {
-        //maxHealth = 100;
-        //ChangeHealth(maxHealth);
-        //dice.Add(new Die(4));
+        // maxHealth = 100;
+        // ChangeHealth(maxHealth);
+        // dice.Add(new Die(4));
     }
 
     public bool ChangeHealth(int changeValue)

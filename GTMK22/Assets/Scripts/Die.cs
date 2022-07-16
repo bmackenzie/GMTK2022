@@ -1,15 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class Die : MonoBehaviour
 {
     public int numSides = 4;
     public int[][] sideAction { get; private set; }
     public BonusGoop[] sideBonuses { get; private set; }
+   
 
-    
-    
     // Start is called before the first frame update
     public void Awake()
     {
@@ -24,10 +24,10 @@ public class Die : MonoBehaviour
         for (int i = 0; i < numSides; i++)
         {
             sideAction[i] = new int[2];
-            sideBonuses[i] = new BonusGoop((BonusTypes)0, 0);
+            sideBonuses[i] = new BonusGoop((BonusTypes)0, 0, "nothing fancy");
         }
         // Randomly set a single side with a random bonus
-        sideBonuses[Random.Range(0, numSides - 1)] = new BonusGoop(Random.Range(1, 5));
+        sideBonuses[Random.Range(0, numSides - 1)] = new BonusGoop((BonusTypes)0, 0, "nothing fancy");//DieLibrary.GetRandomGoop();
 
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class Player : MonoBehaviour
 {
@@ -9,7 +10,6 @@ public class Player : MonoBehaviour
     public int lives = 3;
     public int maxLives { get; private set; }
     public int money { get; private set; }
-
     public int maxDice = 3;
     public List<Die> dice;
     public List<BonusGoop> bits;
@@ -17,14 +17,14 @@ public class Player : MonoBehaviour
 
     public void Awake()
     {
+        
         money = 0;
         maxHealth = 100;
         maxLives = 6;
         ChangeHealth(maxHealth);
         //ChangeLives(maxLives);
         // Pick up a random starting bit
-        this.bits.Add(new BonusGoop(Random.Range(1,5)));
-
+        //this.bits.Add(DieLibrary.GetRandomGoop());
     }
     void Start()
     {

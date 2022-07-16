@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
+using UnityEditor;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,9 +18,12 @@ public class GameManager : MonoBehaviour
     {
         this.dialogueRunner = this.GetComponentInChildren<DialogueRunner>();
         this.sceneLoader = this.GetComponent<SceneLoader>();
-        
+        //AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/JsonData/DieFaces.json").text
+        //public DieDatabase DieLibrary = DieDatabase.CreateFromJSON();
         rounds = 1;
     }
+        
+
 
     // Start is called before the first frame update
     void Start()

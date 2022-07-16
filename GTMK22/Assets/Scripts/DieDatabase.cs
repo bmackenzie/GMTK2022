@@ -18,11 +18,11 @@ public class DieDatabase
 
     public BonusGoop GetRandomGoop()
     {
-        int bonus = Random.Range(0, effects.Length - 1);
-        int mag_ind = Random.Range(0, effects[bonus].magnitudes.Length - 1);
+        int bonus = UnityEngine.Random.Range(0, effects.Length - 1);
+        int mag_ind = UnityEngine.Random.Range(0, effects[bonus].magnitudes.Length - 1);
         int mag = Int32.Parse(effects[bonus].magnitudes[mag_ind].value);
         string descript = Regex.Replace(effects[bonus].description, "{magnitude}", effects[bonus].magnitudes[mag_ind].description);
-        return BonusGoop(bonus, mag, descript);
+        return new BonusGoop((BonusTypes)bonus, mag, descript);
     }
 }
 

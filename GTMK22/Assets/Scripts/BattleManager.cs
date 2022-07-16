@@ -77,7 +77,7 @@ public class BattleManager : DialoguePauser
             playerTurn = true;
         }
         
-        Debug.Log(player.health);
+        //Debug.Log(player.health);
     }
 
     void TakePlayerTurn()

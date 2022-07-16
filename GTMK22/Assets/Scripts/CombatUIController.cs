@@ -22,17 +22,17 @@ public class CombatUIController : MonoBehaviour
 
     public void Start() 
     {   
-        Debug.Log("started controller");
+        //Debug.Log("started controller");
         for(int lvs=1;lvs <= player.lives; lvs++)
         {
-            Debug.Log("Lives: " + lvs.ToString());
+            //Debug.Log("Lives: " + lvs.ToString());
             GameObject lifeIcon = Instantiate(lifesPrefab);
             lifeIcon.transform.position += new Vector3((lvs-1)*1, 0, 0);
         }
         
         for(int die=1;die <= player.dice.Count; die++)
         {
-            Debug.Log("Dice: " + die.ToString());
+            //Debug.Log("Dice: " + die.ToString());
             GameObject diceIcon = Instantiate(dicePrefab);
             diceIcon.transform.position += new Vector3((float)((die-1)*1.25), 0.0f, 0.0f);
         }

@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
         {
             rounds++;
             this.dialogueRunner.StartDialogue("SecondDialog");
+            GoToShop();
         }
         else
         {
@@ -66,11 +67,20 @@ public class GameManager : MonoBehaviour
             {
                 GoToTitle();
             }
+            else
+            {
+                GoToShop();
+            }
         }
     }
 
     public void GoToTitle()
     {
         sceneLoader.Restart();
+    }
+
+    public void GoToShop()
+    {
+        sceneLoader.LoadSpecificScene("shop");
     }
 }

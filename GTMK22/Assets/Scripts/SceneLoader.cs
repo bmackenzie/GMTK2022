@@ -10,6 +10,8 @@ public class SceneLoader : MonoBehaviour
 
     [SerializeField] private int numScenes;
 
+    private string currentScene = "";
+
 
     public void Restart()
     {
@@ -18,6 +20,11 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadSpecificScene(string sceneName)
     {
+        if (currentScene != "")
+        {
+            SceneManager.UnloadSceneAsync(currentScene);
+        }
         SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
+        currentScene = sceneName;
     }
 }

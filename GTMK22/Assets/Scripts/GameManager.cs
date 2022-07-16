@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
         if(victory)
         {
             rounds++;
-            this.dialogueRunner.StartDialogue("SecondDialog");
+            this.dialogueRunner.StartDialogue("BattleEnd");
             GoToShop();
         }
         else

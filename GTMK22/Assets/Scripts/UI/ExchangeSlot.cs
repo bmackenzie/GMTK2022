@@ -20,6 +20,7 @@ public class ExchangeSlot : MonoBehaviour, IDropHandler
             eventData.pointerDrag.transform.parent = this.transform;
             eventData.pointerDrag.GetComponent<DragDrop>().SetSlot(gameObject);
             isOccupied = true;
+            transform.parent.GetComponent<ExchangePanel>().SetGiveOne(eventData.pointerDrag);
         }
     }
 }

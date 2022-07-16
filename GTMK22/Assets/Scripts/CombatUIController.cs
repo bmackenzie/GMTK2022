@@ -70,7 +70,6 @@ public class CombatUIController : MonoBehaviour
     public void UpdateSpeedNumber()
     {
         speedIndex ++;
-        Debug.Log("Dice: " + die.ToString());
         speedText.text = speeds[speedIndex].ToString() + "X";
         battleManager.updateSpeed = speeds[speedIndex];
         return;

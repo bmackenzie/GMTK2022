@@ -43,21 +43,28 @@ public class CombatUIController : MonoBehaviour
     public void DrawLives()
     {   
         //Debug.Log("started controller");
-        for(int lvs=1;lvs <= player.lives; lvs++)
+        for(int lvs=1;lvs <= player.maxLives; lvs++)
         {
-            //Debug.Log("Lives: " + lvs.ToString());
+            Debug.Log("Lives: " + lvs.ToString());
             GameObject lifeIcon = Instantiate(lifesPrefab);
             lifeIcon.transform.position += new Vector3((lvs-1)*1, 0, 0);
+            if(lvs > player.lives)
+            {
+                lifeIcon.GetComponent<SpriteRenderer>().color = Color.black;
+            }
         }
     }
+
         
     public void DrawDie()
     {
-        for(int die=1;die <= player.dice.Count; die++)
+        foreach(var die in player.dice)
         {
-            //Debug.Log("Dice: " + die.ToString());
-            GameObject diceIcon = Instantiate(dicePrefab);
-            diceIcon.transform.position += new Vector3((float)((die-1)*1.25), 0.0f, 0.0f);
+            //die.transform.position = new Vector3((float)((die-1)*1.25), 0.0f, 0.0f);
+            
+            // Debug.Log("Dice: " + die.ToString());
+            // GameObject diceIcon = Instantiate(dicePrefab);
+            //diceIcon.transform.position += new Vector3((float)((die-1)*1.25), 0.0f, 0.0f);
         }
     }
 

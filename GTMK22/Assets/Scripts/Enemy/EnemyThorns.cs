@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class EnemyThorns : Enemy
 {
-    private int thornStrength = 1;
-
+    public override void Start()
+    {
+        base.Start();
+        thornStrength = 1;
+    }
     public override int[] TakeTurn()
     {
         // TODO: Do your turn
@@ -16,6 +19,7 @@ public class EnemyThorns : Enemy
         }
         else
         {
+            Debug.Log("should be increasing the thorn strength");
             thornStrength++;
             return new int[] { 0, 0, 0};
         }

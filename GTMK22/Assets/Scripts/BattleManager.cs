@@ -89,6 +89,8 @@ public class BattleManager : MonoBehaviour
         if ((enemy.thornStrength > 0)&&(action[0] > 0))
         {
             isPlayerDead = player.ChangeHealth(-enemy.thornStrength);
+            Debug.Log("faaaaaaaaaaaaaaaak");
+            Debug.Log(enemy.thornStrength);
         }
     }
 

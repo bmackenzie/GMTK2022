@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public virtual int thornStrength { get; protected set; } = 1;
+    public int thornStrength { get; protected set; } = 0;
     public int damage { get; protected set; }
     public int health { get; protected set; } = 0;
     public int maxHealth { get; private set; }
@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     //TODO: Maybe add special abilities
 
     // Start is called before the first frame update
-    void Start()
+    public virtual void Start()
     {
         // Initialize values for damage and health
         // for initial testing purposes

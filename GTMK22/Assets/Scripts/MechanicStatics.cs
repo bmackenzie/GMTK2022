@@ -6,10 +6,11 @@ public enum BonusTypes
 {
     None = -1,
     Dmgx2,
-    idkbro
+    idkbro,
+    fuckme
 };
 
-
+[System.Serializable]
 public struct BonusGoop
 {
     public BonusTypes bonusType;
@@ -17,7 +18,7 @@ public struct BonusGoop
 
     public BonusGoop(int mag)
     {
-        bonusType = (BonusTypes)Random.Range(0, System.Enum.GetValues(typeof(BonusTypes)).Length - 2);
+        bonusType = (BonusTypes)Random.Range(0, System.Enum.GetValues(typeof(BonusTypes)).Length - 1);
         magnitude = mag;
     }
 

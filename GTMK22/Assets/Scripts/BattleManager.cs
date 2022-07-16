@@ -48,7 +48,10 @@ public class BattleManager : DialoguePauser
     // Update is called once per frame
     void Update()
     {
-
+        if(this.isPaused)
+        {
+            return;
+        }
         if (isPlayerDead || isEnemyDead)
         {
             FindObjectOfType<GameManager>().EndBattle(isEnemyDead);

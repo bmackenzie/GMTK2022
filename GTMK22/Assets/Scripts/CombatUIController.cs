@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBarController : MonoBehaviour
+public class CombatUIController : MonoBehaviour
 {
     public Image playerHealthBarImage;
   public Image enemyHealthBarImage;

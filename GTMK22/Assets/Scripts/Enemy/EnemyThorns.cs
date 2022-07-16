@@ -2,17 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyCursing : MonoBehaviour
+public class EnemyThorns : Enemy
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private int thornStrength = 1;
 
-    // Update is called once per frame
-    void Update()
+    public override int[] TakeTurn()
     {
-        
+        // TODO: Do your turn
+        int act = Random.Range(0, 2);
+        if (act == 0)
+        {
+            return new int[] { damage, 0, 0 };
+        }
+        else
+        {
+            thornStrength++;
+            return new int[] { 0, 0, 0};
+        }
+
     }
 }

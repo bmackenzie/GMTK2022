@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public virtual int thornStrength { get; protected set; } = 1;
     public int damage { get; protected set; }
     public int health { get; protected set; } = 0;
     public int maxHealth { get; private set; }
@@ -28,7 +29,7 @@ public class Enemy : MonoBehaviour
         // used for animations and the like
     }
 
-    public int[] TakeTurn()
+    public virtual int[] TakeTurn()
     {
         // TODO: Do your turn
         return new int[] {damage, 0, 0};

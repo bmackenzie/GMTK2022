@@ -6,18 +6,19 @@ public class EnemyScaling : Enemy
 {
     private int scaleFactor = 5;
     private int scaleCount = 0;
-    public int[] TakeTurn()
+    public override int[] TakeTurn()
     {
         // TODO: Do your turn
         scaleCount++;
+        Debug.Log(damage);
         if (scaleCount%scaleFactor == 0)
         {
             damage++;
-            return new int[] { 0, 0 };
+            return new int[] { 0, 0 , 0};
         }
         else
         {
-            return new int[] { damage, 0 };
+            return new int[] { damage, 0, 0 };
         }
         
     }

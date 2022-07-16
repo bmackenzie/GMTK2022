@@ -72,21 +72,23 @@ public class BattleManager : MonoBehaviour
     {
         action = player.dice[dieNumber].RollDie();
         isEnemyDead = enemy.ChangeHealth(-action[0]);
-        Debug.Log("before switch");
         switch (action[1])
         {
             case 0:
-                Debug.Log("No fancy status placeholder");
                 break;
             case 1:
                 enemy.ChangePoison(action[2]);
                 Debug.Log("Poison placeholder!");
-                enemy.ChangeHealth(-enemy.poisonCounter);
+                isEnemyDead = enemy.ChangeHealth(-enemy.poisonCounter);
                 break;
         }
         if (enemy.poisonCounter > 0)
         {
             enemy.ChangePoison(-1);
+        }
+        if ((enemy.thornStrength > 0)&&(action[0] > 0))
+        {
+            isPlayerDead = player.ChangeHealth(-enemy.thornStrength);
         }
     }
 
@@ -97,18 +99,21 @@ public class BattleManager : MonoBehaviour
         switch (action[1])
         {
             case 0:
-
-                Debug.Log("armor from enemy placeholder");
                 break;
             case 1:
                 player.ChangePoison(action[2]);
-                Debug.Log("Poison from enemy placeholder");
-                player.ChangeHealth(-player.poisonCounter);
+                Debug.Log("Our current poison level");
+                Debug.Log(player.poisonCounter);
+                isPlayerDead = player.ChangeHealth(-player.poisonCounter);
                 break;
         }
         if (player.poisonCounter > 0)
         {
             player.ChangePoison(-1);
+        }
+        if ((player.thornStrength > 0) && (action[0] > 0))
+        {
+            isEnemyDead = enemy.ChangeHealth(-player.thornStrength);
         }
     }
 }

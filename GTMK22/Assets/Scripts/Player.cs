@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public int maxDice = 1;
     public List<Die> dice;
     public int poisonCounter { get; private set; }
+    public int thornStrength { get; private set; }
 
     public void Awake()
     {

@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public int thornStrength { get; protected set; } = 0;
     public int damage { get; protected set; }
     public int health { get; protected set; } = 0;
     public int maxHealth { get; private set; }
-    public int poisonCounter { get; private set; }
 
     //TODO: Maybe add special abilities
 
@@ -20,7 +18,6 @@ public class Enemy : MonoBehaviour
         maxHealth = 20;
         ChangeHealth(maxHealth);
         damage = 1;
-        poisonCounter = 0;
     }
 
     // Update is called once per frame
@@ -49,10 +46,6 @@ public class Enemy : MonoBehaviour
         {
             return false;
         }
-    }
-    public void ChangePoison(int poison)
-    {
-        poisonCounter += poison;
     }
 
 }

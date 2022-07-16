@@ -10,11 +10,9 @@ public class EnemyScaling : Enemy
     {
         // TODO: Do your turn
         scaleCount++;
-        Debug.Log(damage);
         if (scaleCount%scaleFactor == 0)
         {
-            damage++;
-            return new int[] { 0, 0 , 0};
+            return new int[] { 0, 6 , 1};
         }
         else
         {

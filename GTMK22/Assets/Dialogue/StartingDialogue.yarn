@@ -58,7 +58,7 @@ tags:
 title: Round1End
 tags:
 ---
-Fork: Haha! I showed you!
+Fork: Haha! Take that, beardy!
 <<set $currentRound to $currentRound + 1>>
 ===
 
@@ -66,7 +66,8 @@ Fork: Haha! I showed you!
 title: Round2End
 tags:
 ---
-Fork: Haha! I showed you!
+Fork: Yes! I think I'm getting the hang of these gizmos
+Swole-d Man In Robes: You're surprisingly strong for such a tiny creature.
 <<set $currentRound to $currentRound + 1>>
 ===
 

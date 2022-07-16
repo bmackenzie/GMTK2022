@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Die : MonoBehaviour
 {
-    public int numSides { get; private set; }
+    public int numSides = 4;
     public int[][] sideAction { get; private set; }
     public BonusGoop[] sideBonuses { get; private set; }
 
@@ -13,7 +13,7 @@ public class Die : MonoBehaviour
     // Start is called before the first frame update
     public void Awake()
     {
-        SetNumSides(4);
+        SetNumSides(numSides);
     }
 
     public void SetNumSides(int sides)

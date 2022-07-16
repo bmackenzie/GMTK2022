@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public int lives { get; private set; }
     public int money { get; private set; }
 
-    public int maxDice = 1;
+    public int maxDice = 3;
     public List<Die> dice;
     public List<BonusGoop> bits;
 

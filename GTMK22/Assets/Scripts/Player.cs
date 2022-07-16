@@ -8,8 +8,10 @@ public class Player : MonoBehaviour
     public int maxHealth { get; private set; }
     public int lives { get; private set; }
     public int money { get; private set; }
+
     public int maxDice = 1;
     public List<Die> dice;
+    public List<BonusGoop> bits;
     public int poisonCounter { get; private set; }
     public int thornStrength { get; private set; }
 
@@ -20,7 +22,8 @@ public class Player : MonoBehaviour
         maxHealth = 100;
         ChangeHealth(maxHealth);
         poisonCounter = 0;
-        
+        // Pick up a random starting bit
+        this.bits.Add(new BonusGoop(Random.Range(1,5)));
 
     }
     void Start()

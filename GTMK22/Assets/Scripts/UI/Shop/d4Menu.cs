@@ -99,7 +99,6 @@ public class d4Menu : MonoBehaviour
     void UpdateFace(int position)
     {
         Debug.Log("firing");
-        //update the die with the ActiveFace GameObject
         slimeDetails.sideBonuses[position] = activeFace.GetComponent<RenderFaceEffectIcon>().faceEffect;
         slimeDetails.sideBonuses[position].SetMagnitude(position);
         Destroy(activeFace);

@@ -55,6 +55,10 @@ public class Player : MonoBehaviour
         {
             GameOver();
         }
+        else
+        {
+            health = maxHealth;
+        }
     }
 
     public bool ChangeMoney(int changeValue)

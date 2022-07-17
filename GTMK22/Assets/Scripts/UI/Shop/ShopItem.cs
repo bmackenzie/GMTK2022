@@ -18,10 +18,10 @@ public class ShopItem : MonoBehaviour
     {
         if (exchangePanel.transform.gameObject.activeSelf == false)
         {
-            exchangePanel.transform.gameObject.SetActive(true);
-            transform.parent = exchangeSlot.transform;
-            GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
-            transform.parent.parent.GetComponent<ExchangePanel>().SetRecieve(gameObject);
+            //exchangePanel.transform.gameObject.SetActive(true);
+            //transform.parent = exchangeSlot.transform;
+            //GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
+            //transform.parent.parent.GetComponent<ExchangePanel>().SetRecieve(gameObject);
         }
         else
         {

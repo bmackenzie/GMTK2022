@@ -20,36 +20,40 @@ public class d4Menu : MonoBehaviour
 
     void Awake()
     {
-        slimeDetails = slime.slimeDetails;
-        desc1.text = slimeDetails.sideBonuses[0].description;
-        if (slimeDetails.sideBonuses[0].description != "nothing fancy")
-        {
-            slot1.interactable = false;
-
-        }
-
-        desc2.text = slimeDetails.sideBonuses[1].description;
-        if (slimeDetails.sideBonuses[1].description != "nothing fancy")
-        {
-            slot2.interactable = false;
-
-        }
-
-        desc3.text = slimeDetails.sideBonuses[2].description;
-        if (slimeDetails.sideBonuses[2].description != "nothing fancy")
-        {
-            slot3.interactable = false;
-
-        }
-
-        desc4.text = slimeDetails.sideBonuses[3].description;
-        if (slimeDetails.sideBonuses[3].description != "nothing fancy")
-        {
-            slot4.interactable = false;
-
-        }
-
+        UpdateMenu();
     }
+
+     void UpdateMenu()
+        {
+            slimeDetails = slime.slimeDetails;
+            desc1.text = slimeDetails.sideBonuses[0].description;
+            if (slimeDetails.sideBonuses[0].description != "nothing fancy")
+            {
+                slot1.interactable = false;
+
+            }
+
+            desc2.text = slimeDetails.sideBonuses[1].description;
+            if (slimeDetails.sideBonuses[1].description != "nothing fancy")
+            {
+                slot2.interactable = false;
+
+            }
+
+            desc3.text = slimeDetails.sideBonuses[2].description;
+            if (slimeDetails.sideBonuses[2].description != "nothing fancy")
+            {
+                slot3.interactable = false;
+
+            }
+
+            desc4.text = slimeDetails.sideBonuses[3].description;
+            if (slimeDetails.sideBonuses[3].description != "nothing fancy")
+            {
+                slot4.interactable = false;
+
+            }
+        }
 
     public void OpenMenu(GameObject active)
     {
@@ -61,6 +65,7 @@ public class d4Menu : MonoBehaviour
     {
         gameObject.SetActive(false);
         slimeDetails = slime.slimeDetails;
+        UpdateMenu();
     }
 
     public void Slot1Click()

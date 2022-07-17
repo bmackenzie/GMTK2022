@@ -37,10 +37,12 @@ tags:
     Snooty Wizard: I wouldn't need to be here if you would follow proper procedure with form-
     Fork: Nononononononononon
     Fork: I don't want to hear paperwork talk!
-    Snooty Wizard: Being a wizard include the occasional paperwork, which you would know if you were truly a wizard.
+    Snooty Wizard: Being a wizard include the occasional paperwork...
+    Snooty Wizard: Which you would know if you were truly a wizard.
     Fork: No- wait, wait, wait. Do you doubt my wizard-ness?
     Snooty Wizard: In all my visits, you've yet to show anything even approximating talent.
-    Fork: Wha- You take that back! I'm a great wizard! And Stinky, Fungus, and Mildew are the perfect summons!
+    Fork: Wha- You take that back! I'm a great wizard!
+    Fork: And Stinky, Fungus, and Mildew are the perfect summons!
     Snooty Wizard: You... Please tell me you are not referring to those hideous blobs.
     Fork: THAT DOES IT!!!
     Fork: Bring out your summons! You can't insult my goo-des and get away with it!
@@ -84,7 +86,8 @@ Snooty Wizard: That is- you are such a child!
 Fork: Hah! Sticks and stones and goop and snot!
 Snooty Wizard: What does that even mean?
 Fork: It means I'm rubber and you're slime!
-Snooty Wizard: Ugh. Next time I wont hold back with my summons. We'll see how well you hold out.
+Snooty Wizard: Ugh. Next time I wont hold back with my summons. 
+Snooty Wizard: We'll see how well you hold out.
 Fork: Pfffft, we'll beat you every time! No more paperwork!
 <<set $currentRound to $currentRound + 1>>
 ===
@@ -92,28 +95,82 @@ Fork: Pfffft, we'll beat you every time! No more paperwork!
 title: Round4End
 tags:
 ---
-BLEH
+Fork: Yeeeeeeees, dissolve those papers, Stinky!
+Snooty Wizard: Do you know the hoops I go through to get these forms???
+Snooty Wizard: Can you just stop destroying them?
+Fork: I don't want any.
+Snooty Wizard: What does that even-
+Fork: I SAID I DON'T WANT ANY
+Snooty Wizard: Could you just-
+Fork: NO
+Snooty Wizard: That DOES IT.
+Snooty Wizard: I have been TRYING to be courteous!
+Snooty Wizard: But I'm going to destroy your slimes and force you to act appropriately!
+Fork: Hah! Just try it! We've beat you every time!
 <<set $currentRound to $currentRound + 1>>
 ===
 
 title: Round8End
 tags:
 ---
-BLEH
+Snooty Wizard: I hate to admit it, but...
+Snooty Wizard: Your slimes are... Quite effective.
+Fork: Of course they are! They're upgradeable! Made by me the genius!!
+Snooty Wizard: It is bad manners to be so conceited when you recieve such a small compliment.
+Fork: It's dumb dumb to use big words to act all snooty!
+Snooty Wizard: Excuse me? I have been using smaller words than usual explicitly for your benefit!
+Fork: ARE YOU CALLING ME STUPID?!?!
+Snooty Wizard: -sigh- Why do I even bother...
 <<set $currentRound to $currentRound + 1>>
 ===
 
 title: Round9End
 tags:
 ---
-BLEH
+Fork: HAHAHAHAHAHAHAHA YOU CAN'T BEAT US!!
+Snooty Wizard: Don't act so over confident! I've only used old research summons so far!
+Snooty Wizard: Next time I'll-
+Fork: Still lose and make that dumb scrunchy nose face!
+Snooty Wizard: My face is not dumb!
+Fork: But your summons are!
+Snooty Wizard: I already said these are-
+Fork: Blah, blah, blah, excuses, excuses!
+Snooty Wizard: It's like you were explicitly designed to vex me...
+Fork: Pffft, I'm the best wizard, so clearly you were made to bug me!
+Snooty Wizard: I beg your pardon? My existence is most certainly not tied to YOU
+Fork: Then why do you keep coming to my workshop????
+Snooty Wizard: Because you have not filled out these forms!
+Fork: Excuses! I'm never gonna do it! Never ever ever ever ever!
+Snooty Wizard: Ugh. Dealing with you has taken far too much time.
+Snooty Wizard: Next time I'm bringing the culmination of all my research.
+Snooty Wizard: I'm going to bring an end to this absurd performance.
 <<set $currentRound to $currentRound + 1>>
 ===
 
 title: Round10End
 tags:
 ---
-BLEH
+Fork: Hahaha! We did it!
+Snooty Wizard: You... Actually did.
+Snooty Wizard: That's a summon I've been carefully crafting for quite some time.
+Snooty Wizard: 
+Snooty Wizard: I'm impressed by how you've continually developed these... slimes.
+Snooty Wizard: Perhaps we started on the wrong foot, Fork.
+Fork: That wingy boi was pretty cool... Uh, you got a name?
+Snooty Wizard: Oh, my! I never introduced myself!
+Heather: My name is Heather. I'm a tad embarrassed we went this long without introductions.
+Heather: I manage the branch office for the Wizard's Council in this area.
+Fork: 'S that why you keep yammering about paperwork?
+Heather: It is really important for the council to know about your ongoing research. It furthers the overall capability of magic and wizard prowess and allows us to continue improving our craft to support society at large
+Fork: Too much background!!
+Fork:
+Heather:
+Fork:
+Heather:
+Fork: Mrrg, fine! I guess I can do your dumb paperwork!
+Fork: But you gotta stay and help!
+Heather: Hmm, I believe I have time for that. You can tell me about those items you keep embedded in your slimes.
+Fork: Deal!
 <<set $currentRound to $currentRound + 1>>
 ===
 

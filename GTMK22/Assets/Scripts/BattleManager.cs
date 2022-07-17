@@ -148,12 +148,12 @@ public class BattleManager : DialoguePauser
     // Update is called once per frame
     void Update()
     {
-        if(this.isPaused)
+        if (this.isPaused)
         {
             return;
         }
-        
-        if(updateFlag < (1000 / updateSpeed))
+
+        if (updateFlag < (1000 / updateSpeed))
         {
             updateFlag++;
             return;
@@ -163,23 +163,26 @@ public class BattleManager : DialoguePauser
         {
             FindObjectOfType<GameManager>().EndBattle(isEnemyDead);
         }
-
+        Debug.Log("player turn" + playerTurn);
         if (playerTurn)
         {
-            TakePlayerTurn();
             playerTurn = false;
+            TakePlayerTurn();
+            
         }
         else
         {
-            TakeEnemyTurn();
             playerTurn = true;
+            TakeEnemyTurn();
+           
         }
-        
+        Debug.Log("player turn" + playerTurn);
         //Debug.Log(player.health);
     }
 
     void TakePlayerTurn()
     {
+        Debug.Log("taking player turn");
         if (!playerSkipTurn)
         {
             action = player.dice[dieNumber].RollDie();
@@ -294,11 +297,11 @@ public class BattleManager : DialoguePauser
                     }
                     wasAttacked = true;
                     break;
-                }
+            }
             Debug.Log("made it here");
             Instantiate(damageVisualEffectsPrefab, new Vector3(2, 0, 0), Quaternion.identity);
             animator.UpdateDamageNumbers(action[0],action[1],action[2]);
-            }
+        }
         else
         {
             enemySkipTurn = false;

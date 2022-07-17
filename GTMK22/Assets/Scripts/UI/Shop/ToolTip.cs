@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ToolTip : MonoBehaviour
 {
-    [SerializeField] private Image tooltipContainer;
+    [SerializeField] public Image tooltipContainer;
 
     public void ShowToolTip()
     {

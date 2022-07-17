@@ -30,6 +30,7 @@ public class RenderFaceEffectIcon : MonoBehaviour
     {
         faceEffect = newEffect;
         GetComponent<Image>().sprite = faceEffectIconList[(int)faceEffect.bonusType - 1];
+        GetComponent<ToolTip>().tooltipContainer.GetComponentInChildren<TMPro.TMP_Text>().text = faceEffect.description;
     }
 
     public void UpdateCombatEffectShadow(int bnsType)

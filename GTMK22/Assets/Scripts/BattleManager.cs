@@ -42,11 +42,13 @@ public class BattleManager : DialoguePauser
     public GameObject e8;
     public GameObject e9;
     public GameObject e10;
+    public DamageVisualEffects animator;
 
     private void Awake()
     {
         gameManager = FindObjectOfType<GameManager>();
         player = FindObjectOfType<Player>();
+        animator = FindObjectOfType<DamageVisualEffects>();
         switch (gameManager.rounds)
         {
             case 1:
@@ -180,6 +182,7 @@ public class BattleManager : DialoguePauser
         if (!playerSkipTurn)
         {
             action = player.dice[dieNumber].RollDie();
+            
             dieNumber++;
             dieNumber = dieNumber % 3;
             if (action[0] > 0)
@@ -220,6 +223,8 @@ public class BattleManager : DialoguePauser
                     wasAttacked = true;
                     break;
             }
+            animator.UpdateDamageNumbers(action[0],action[1],action[2]);
+
         }
         else
         {
@@ -287,9 +292,9 @@ public class BattleManager : DialoguePauser
                     }
                     wasAttacked = true;
                     break;
+                }
+            animator.UpdateDamageNumbers(action[0],action[1],action[2]);
             }
-
-        }
         else
         {
             enemySkipTurn = false;

@@ -8,7 +8,7 @@ public class FightButton : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        FindObjectOfType<GameManager>();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame

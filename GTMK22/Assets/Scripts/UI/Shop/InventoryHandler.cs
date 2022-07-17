@@ -26,6 +26,7 @@ public class InventoryHandler : MonoBehaviour
         for(int i = 0; i < lootList.Count; i++)
         {
             lootList[i].UpdateFaceEffect(dieDatabase.GetRandomGoop());
+            Debug.Log("got random face goop");
         }
     }
     void Start()

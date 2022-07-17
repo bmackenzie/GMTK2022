@@ -53,7 +53,7 @@ public class Die : MonoBehaviour
             bonusType = sideBonuses[i].bonusType;
             if (bonusType != 0)
             {
-                returnString = returnString + "\nSide " + i + 1 + "has bonus of " + bonusType + " with magnitude " + magnitude;
+                returnString = returnString + "\nSide " + i + 1 + " has bonus of " + bonusType + " with magnitude " + magnitude;
             }
         }
         return returnString;

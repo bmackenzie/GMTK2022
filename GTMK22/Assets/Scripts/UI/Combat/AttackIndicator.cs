@@ -21,7 +21,7 @@ public class AttackIndicator : MonoBehaviour
         //Debug.Log("updating enemy healthbar: "+ Mathf.Clamp((float)enemy.health / enemy.maxHealth, 0.0f, 1.0f).ToString());
         try
         {
-            healthBarImage.fillAmount = Mathf.Clamp((float)enemy.health / enemy.maxHealth, 0.0f, 1.0f);
+            //healthBarImage.fillAmount = Mathf.Clamp((float)enemy.health / enemy.maxHealth, 0.0f, 1.0f);
         }
         catch
         {

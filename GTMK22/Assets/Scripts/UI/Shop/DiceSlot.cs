@@ -14,8 +14,12 @@ public class DiceSlot : MonoBehaviour, IDropHandler
     {
         this.slimeDetails = FindObjectOfType<Player>().GetDieDetails(numSides);
         hoverTextObject.text = this.slimeDetails.GetFaceInfo();
-
     }
+
+
+    // add in order of die to slime details to be read in battle manager
+
+        
     public void OnDrop(PointerEventData eventData)
     {
         if(eventData.pointerDrag != null)

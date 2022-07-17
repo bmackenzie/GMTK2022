@@ -17,8 +17,8 @@ public class DrawLives : MonoBehaviour
         for (int lvs = 1; lvs <= maxLives; lvs++)
         {
             //.Log("Lives: " + lvs.ToString());
-            GameObject lifeIcon = Instantiate(lifesPrefab);
-            lifeIcon.transform.position += new Vector3((lvs - 1) * 1, 0, 0);
+            GameObject lifeIcon = Instantiate(lifesPrefab, this.transform);
+            lifeIcon.transform.position += new Vector3((float)((lvs - 1)/2.0) , 0, 0);
             if (lvs > currentLives)
             {
                 lifeIcon.GetComponent<Image>().color = Color.black;

@@ -28,11 +28,6 @@ public class d8Menu : MonoBehaviour
 
     void Awake()
     {
-        UpdateMenu();
-    }
-
-    void UpdateMenu()
-    {
         slimeDetails = slime.slimeDetails;
         RedrawMenu();
     }
@@ -107,7 +102,6 @@ public class d8Menu : MonoBehaviour
     {
         gameObject.SetActive(false);
         slimeDetails = slime.slimeDetails;
-        UpdateMenu();
     }
 
     public void Slot1Click()

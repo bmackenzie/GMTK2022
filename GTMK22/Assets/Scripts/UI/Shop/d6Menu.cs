@@ -24,14 +24,8 @@ public class d6Menu : MonoBehaviour
 
     void Awake()
     {
-        UpdateMenu();
-    }
-
-    void UpdateMenu()
-    {
         slimeDetails = slime.slimeDetails;
         RedrawMenu();
-
     }
 
     void RedrawMenu()
@@ -90,7 +84,6 @@ public class d6Menu : MonoBehaviour
     {
         gameObject.SetActive(false);
         slimeDetails = slime.slimeDetails;
-        UpdateMenu();
     }
 
     public void Slot1Click()

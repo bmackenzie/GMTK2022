@@ -151,6 +151,7 @@ public class d8Menu : MonoBehaviour
         //slimeDetails.sideBonuses[position] = activeFace.GetComponent<RenderFaceEffectIcon>().faceEffect;
         //slimeDetails.sideBonuses[position].SetMagnitude(position);
         slimeDetails.ChangeSide(position, activeFace.GetComponent<RenderFaceEffectIcon>().faceEffect);
+        FindObjectOfType<Player>().RemoveInventoryItem(activeFace.GetComponent<RenderFaceEffectIcon>().faceEffect);
         Destroy(activeFace);
         CloseMenu();
     }

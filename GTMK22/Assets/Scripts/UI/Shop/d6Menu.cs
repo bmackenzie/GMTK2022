@@ -25,65 +25,46 @@ public class d6Menu : MonoBehaviour
     void Awake()
     {
         slimeDetails = slime.slimeDetails;
-        try
+        desc1.text = slimeDetails.sideBonuses[0].description;
+        if (slimeDetails.sideBonuses[0].description != "nothing fancy")
         {
-            desc1.text = slimeDetails.sideBonuses[0].description;
             slot1.interactable = false;
 
         }
-        catch
-        {
-            desc1.text = "empty";
-        }
 
-        try
+        desc2.text = slimeDetails.sideBonuses[1].description;
+        if (slimeDetails.sideBonuses[1].description != "nothing fancy")
         {
-            desc2.text = slimeDetails.sideBonuses[1].description;
             slot2.interactable = false;
-        }
-        catch
-        {
-            desc2.text = "empty";
+
         }
 
-        try
+        desc3.text = slimeDetails.sideBonuses[2].description;
+        if (slimeDetails.sideBonuses[2].description != "nothing fancy")
         {
-            desc3.text = slimeDetails.sideBonuses[2].description;
             slot3.interactable = false;
-        }
-        catch
-        {
-            desc3.text = "empty";
+
         }
 
-        try
+        desc4.text = slimeDetails.sideBonuses[3].description;
+        if (slimeDetails.sideBonuses[3].description != "nothing fancy")
         {
-            desc4.text = slimeDetails.sideBonuses[3].description;
             slot4.interactable = false;
-        }
-        catch
-        {
-            desc4.text = "empty";
+
         }
 
-        try
+        desc5.text = slimeDetails.sideBonuses[4].description;
+        if (slimeDetails.sideBonuses[4].description != "nothing fancy")
         {
-            desc5.text = slimeDetails.sideBonuses[4].description;
             slot5.interactable = false;
-        }
-        catch
-        {
-            desc5.text = "empty";
+
         }
 
-        try
+        desc6.text = slimeDetails.sideBonuses[5].description;
+        if (slimeDetails.sideBonuses[5].description != "nothing fancy")
         {
-            desc6.text = slimeDetails.sideBonuses[5].description;
             slot6.interactable = false;
-        }
-        catch
-        {
-            desc6.text = "empty";
+
         }
 
     }

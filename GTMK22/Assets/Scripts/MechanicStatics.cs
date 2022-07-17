@@ -25,25 +25,27 @@ public class BonusGoop
 
     public BonusGoop(BonusTypes bonus, int mag, int relation, string desc)
     {
-        bonusType = bonus;
-        gooStrength = mag;
-        description = desc;
-        dieRelation = relation;
+        this.bonusType = bonus;
+        this.gooStrength = mag;
+        this.description = desc;
+        this.dieRelation = relation;
+        Debug.Log("goo strength " + this.gooStrength + " and die relation " + this.dieRelation);
     }
 
     public void SetMagnitude(int dieFace)
     {
+        Debug.Log("goo strength " + this.gooStrength + " and die relation " + this.dieRelation);
         // We expect to be given the index of the dieface, not the actual value on the face ie. the face with 3 dots should have dieFace=2
-        switch (dieRelation)
+        switch (this.dieRelation)
         {
             case 0: // magnitude is goo strength
-                magnitude = gooStrength;
+                this.magnitude = this.gooStrength;
                 break;
             case 1: // magnitude is goo strength * die value
-                magnitude = gooStrength * (dieFace + 1);
+                this.magnitude = this.gooStrength * (dieFace + 1);
                 break;
             case 2: // magnitude is die value / die value
-                magnitude = (int)(dieFace + 1) / gooStrength;
+                this.magnitude = (int)(dieFace + 1) / this.gooStrength;
                 break;
             case 3: // good idea but we aint using it yet because scope
                 Debug.Log("you should really not be here");

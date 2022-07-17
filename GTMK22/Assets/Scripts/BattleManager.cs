@@ -32,8 +32,16 @@ public class BattleManager : DialoguePauser
     private int attackStrength = 0;
     private bool wasAttacked = false;
     private GameManager gameManager;
-    private GameObject test1;
-
+    public GameObject e1;
+    public GameObject e2;
+    public GameObject e3;
+    public GameObject e4;
+    public GameObject e5;
+    public GameObject e6;
+    public GameObject e7;
+    public GameObject e8;
+    public GameObject e9;
+    public GameObject e10;
 
 
 
@@ -44,60 +52,70 @@ public class BattleManager : DialoguePauser
         switch (gameManager.rounds)
         {
             case 1:
-                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyBase.prefab", typeof(GameObject)),this.transform);
+                e1 = Instantiate(e1, this.transform) as GameObject;
+                e1.transform.position += new Vector3(3, -2, 0);
                 Debug.Log("loaded Enemy Base prefab");
                 break;
             case 2:
-                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyDodge.prefab", typeof(GameObject)), this.transform);
+                e1 = Instantiate(e1, this.transform) as GameObject;
+                e1.transform.position += new Vector3(3, -2, 0);
                 Debug.Log("loaded Enemy Dodge prefab");
 
                 break;
             case 3:
-                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyThorns.prefab", typeof(GameObject)), this.transform);
+                e1 = Instantiate(e1, this.transform) as GameObject;
+                e1.transform.position += new Vector3(3, -2, 0);
                 Debug.Log("loaded Enemy Thorns prefab");
 
                 break;
             case 4:
-                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyHeavy.prefab", typeof(GameObject)), this.transform);
+                e1 = Instantiate(e1, this.transform) as GameObject;
+                e1.transform.position += new Vector3(3, -2, 0);
                 Debug.Log("loaded Enemy Heavy prefab");
 
                 break;
             case 5:
-                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyScaling.prefab", typeof(GameObject)), this.transform);
+                e1 = Instantiate(e1, this.transform) as GameObject;
+                e1.transform.position += new Vector3(3, -2, 0);
                 Debug.Log("loaded Enemy Scaling prefab");
 
                 break;
             case 6:
-                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyPoison.prefab", typeof(GameObject)), this.transform);
+                e1 = Instantiate(e1, this.transform) as GameObject;
+                e1.transform.position += new Vector3(3, -2, 0);
                 Debug.Log("loaded Enemy Poison prefab");
 
                 break;
             case 7:
-                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Enemy6.prefab", typeof(GameObject)), this.transform);
+                e1 = Instantiate(e1, this.transform) as GameObject;
+                e1.transform.position += new Vector3(3, -2, 0);
                 Debug.Log("loaded Enemy 6 prefab");
 
                 break;
             case 8:
-                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyTank.prefab", typeof(GameObject)), this.transform);
+                e1 = Instantiate(e1, this.transform) as GameObject;
+                e1.transform.position += new Vector3(3, -2, 0);
                 Debug.Log("loaded Enemy Tank prefab");
 
                 break;
             case 9:
-                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyMulti.prefab", typeof(GameObject)), this.transform);
+                e1 = Instantiate(e1, this.transform) as GameObject;
+                e1.transform.position += new Vector3(3, -2, 0);
                 Debug.Log("loaded Enemy Multi prefab");
 
                 break;
             case 10:
-                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyBoss.prefab", typeof(GameObject)), this.transform);
+                e1 = Instantiate(e1, this.transform) as GameObject;
+                e1.transform.position += new Vector3(3, -2, 0);
                 Debug.Log("loaded Enemy Boss prefab");
 
                 break;
             default:
-                Debug.Log("sould not be here");
+                Debug.Log("should not be here");
                 break;
 
         }
-        test1.transform.position += new Vector3(3, -2, 0);
+        
         enemy = FindObjectOfType<Enemy>();
     }
 

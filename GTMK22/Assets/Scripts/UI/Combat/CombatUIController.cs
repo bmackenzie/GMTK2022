@@ -65,7 +65,7 @@ public class CombatUIController : MonoBehaviour
     {
         for (int i = 0; i < player.dice.Count; i++)
         {
-            player.dice[i].transform.position = new Vector3((float)(((i-1)*2)-5), -5.0f, 0.0f);
+            player.dice[i].transform.position = new Vector3((float)(((i-1)*2)-3), -2.5f, 0.0f);
             
             // Debug.Log("Dice: " + die.ToString());
             // GameObject diceIcon = Instantiate(dicePrefab);

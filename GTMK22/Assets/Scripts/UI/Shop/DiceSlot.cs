@@ -20,7 +20,7 @@ public class DiceSlot : MonoBehaviour, IDropHandler
         
     public void OnDrop(PointerEventData eventData)
     {
-        if (eventData.pointerDrag != null)
+        if (eventData.pointerDrag != null && eventData.pointerDrag.GetComponent<RenderFaceEffectIcon>() != null)
         {
             Debug.Log("ping");
             switch (numSides)
@@ -47,6 +47,11 @@ public class DiceSlot : MonoBehaviour, IDropHandler
         }
 
         // This could be location for handoff between shop faces added and die info
+    }
+
+    public void UpdateHoverText()
+    {
+        hoverTextObject.text = this.slimeDetails.GetFaceInfo();
     }
 
     public void OnDestroy()

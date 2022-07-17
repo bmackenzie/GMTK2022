@@ -61,9 +61,9 @@ public class Die : MonoBehaviour
 
     public void ChangeSide(int side, BonusGoop action)
     {
-        if (side > 0 && side <= numSides )
+        if (side >= 0 && side < numSides )
         {
-            sideBonuses[side] = action;
+            sideBonuses[side] = new BonusGoop(action.bonusType,action.magnitude,action.dieRelation,action.description);
             sideBonuses[side].SetMagnitude(side);
         }
         else

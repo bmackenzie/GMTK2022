@@ -20,52 +20,54 @@ public class d4Menu : MonoBehaviour
 
     void Awake()
     {
-        UpdateMenu();
+        slimeDetails = slime.slimeDetails;
+        RedrawMenu();
     }
 
-     void UpdateMenu()
+    void RedrawMenu()
+    {
+        desc1.text = slimeDetails.sideBonuses[0].description;
+        if (slimeDetails.sideBonuses[0].description != "nothing fancy")
         {
-            slimeDetails = slime.slimeDetails;
-            desc1.text = slimeDetails.sideBonuses[0].description;
-            if (slimeDetails.sideBonuses[0].description != "nothing fancy")
-            {
-                slot1.interactable = false;
+            slot1.interactable = false;
 
-            }
-
-            desc2.text = slimeDetails.sideBonuses[1].description;
-            if (slimeDetails.sideBonuses[1].description != "nothing fancy")
-            {
-                slot2.interactable = false;
-
-            }
-
-            desc3.text = slimeDetails.sideBonuses[2].description;
-            if (slimeDetails.sideBonuses[2].description != "nothing fancy")
-            {
-                slot3.interactable = false;
-
-            }
-
-            desc4.text = slimeDetails.sideBonuses[3].description;
-            if (slimeDetails.sideBonuses[3].description != "nothing fancy")
-            {
-                slot4.interactable = false;
-
-            }
         }
+
+        desc2.text = slimeDetails.sideBonuses[1].description;
+        if (slimeDetails.sideBonuses[1].description != "nothing fancy")
+        {
+            slot2.interactable = false;
+
+        }
+
+        desc3.text = slimeDetails.sideBonuses[2].description;
+        if (slimeDetails.sideBonuses[2].description != "nothing fancy")
+        {
+            slot3.interactable = false;
+
+        }
+
+        desc4.text = slimeDetails.sideBonuses[3].description;
+        if (slimeDetails.sideBonuses[3].description != "nothing fancy")
+        {
+            slot4.interactable = false;
+
+        }
+    }
+
 
     public void OpenMenu(GameObject active)
     {
         activeFace = active;
+        RedrawMenu();
     }
 
 
     public void CloseMenu()
     {
         gameObject.SetActive(false);
-        slimeDetails = slime.slimeDetails;
-        UpdateMenu();
+        slime.slimeDetails = slimeDetails;
+        slime.UpdateHoverText();
     }
 
     public void Slot1Click()
@@ -91,8 +93,10 @@ public class d4Menu : MonoBehaviour
     void UpdateFace(int position)
     {
         Debug.Log("firing");
-        slimeDetails.sideBonuses[position] = activeFace.GetComponent<RenderFaceEffectIcon>().faceEffect;
-        slimeDetails.sideBonuses[position].SetMagnitude(position);
+        //slimeDetails.sideBonuses[position] = activeFace.GetComponent<RenderFaceEffectIcon>().faceEffect;
+        //slimeDetails.sideBonuses[position].SetMagnitude(position);
+        slimeDetails.ChangeSide(position, activeFace.GetComponent<RenderFaceEffectIcon>().faceEffect);
+        FindObjectOfType<Player>().RemoveInventoryItem(activeFace.GetComponent<RenderFaceEffectIcon>().faceEffect);
         Destroy(activeFace);
         CloseMenu();
     }

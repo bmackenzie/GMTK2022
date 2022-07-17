@@ -29,6 +29,11 @@ public class d8Menu : MonoBehaviour
     void Awake()
     {
         slimeDetails = slime.slimeDetails;
+        RedrawMenu();
+    }
+
+    void RedrawMenu()
+    {
         desc1.text = slimeDetails.sideBonuses[0].description;
         if (slimeDetails.sideBonuses[0].description != "nothing fancy")
         {
@@ -81,7 +86,7 @@ public class d8Menu : MonoBehaviour
         desc8.text = slimeDetails.sideBonuses[7].description;
         if (slimeDetails.sideBonuses[7].description != "nothing fancy")
         {
-            slot6.interactable = false;
+            slot8.interactable = false;
 
         }
     }
@@ -89,13 +94,15 @@ public class d8Menu : MonoBehaviour
     public void OpenMenu(GameObject active)
     {
         activeFace = active;
+        RedrawMenu();
     }
 
 
     public void CloseMenu()
     {
         gameObject.SetActive(false);
-        slimeDetails = slime.slimeDetails;
+        slime.slimeDetails = slimeDetails;
+        slime.UpdateHoverText();
     }
 
     public void Slot1Click()
@@ -141,8 +148,10 @@ public class d8Menu : MonoBehaviour
     void UpdateFace(int position)
     {
         //update the die with the ActiveFace GameObject
-        slimeDetails.sideBonuses[position] = activeFace.GetComponent<RenderFaceEffectIcon>().faceEffect;
-        slimeDetails.sideBonuses[position].SetMagnitude(position);
+        //slimeDetails.sideBonuses[position] = activeFace.GetComponent<RenderFaceEffectIcon>().faceEffect;
+        //slimeDetails.sideBonuses[position].SetMagnitude(position);
+        slimeDetails.ChangeSide(position, activeFace.GetComponent<RenderFaceEffectIcon>().faceEffect);
+        FindObjectOfType<Player>().RemoveInventoryItem(activeFace.GetComponent<RenderFaceEffectIcon>().faceEffect);
         Destroy(activeFace);
         CloseMenu();
     }

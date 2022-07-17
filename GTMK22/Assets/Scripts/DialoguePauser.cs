@@ -6,7 +6,7 @@ using Yarn.Unity;
 public class DialoguePauser : MonoBehaviour
 {
     protected bool isPaused = false;
-    private DialogueRunner dialogueRunner;
+    protected DialogueRunner dialogueRunner;
     // Start is called before the first frame update
     void OnEnable()
     {

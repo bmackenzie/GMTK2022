@@ -4,15 +4,19 @@ using UnityEngine;
 using Yarn.Unity;
 using UnityEditor;
 
-public class GameManager : MonoBehaviour
+public class GameManager : DialoguePauser
 {
     //public TextAsset jsonFile;
-    public DialogueRunner dialogueRunner;
+    //public DialogueRunner dialogueRunner;
     public SceneLoader sceneLoader;
     public Player playerPrefab;
     public Player player;
     //public static string jsonthing;
     public int rounds { get; private set; }
+    private bool goToShop = false;
+    private bool goToBattle = false;
+    private bool goToTitle = false;
+    private bool goToCredits = false;
 
     //[SerializeField] private string[] dialogueNodes;
 
@@ -35,7 +39,28 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(isPaused)
+        {
+            return;
+        }
+        if(goToShop)
+        {
+            GoToShop();
+            goToShop = false;
+        }
+        if(goToBattle)
+        {
+            StartBattle();
+            goToBattle = false;
+        }
+        if(goToTitle)
+        {
+            GoToTitle();
+        }
+        if(goToCredits)
+        {
+            GoToCredits();
+        }
     }
 
     public void StartGame()
@@ -54,6 +79,7 @@ public class GameManager : MonoBehaviour
         // TODO: Instantiate an enemy
         this.player.ShowSlimes();
         sceneLoader.LoadSpecificScene("CombatScene");
+        this.dialogueRunner.StartDialogue("BattleStart");
     }
     public void EndBattle(bool victory)
     {
@@ -67,24 +93,30 @@ public class GameManager : MonoBehaviour
             
             if (rounds <= 10)
             {
-                GoToShop();
+                //GoToShop();
+                goToShop = true;
             }
             else
             {
-                GoToCredits();
+                //GoToCredits();
+                goToCredits = true;
             }
         }
         else
         {
-            this.dialogueRunner.StartDialogue("LoseDialog");
+            
             if (player.lives <= 0)
             {
-                GoToTitle();
+                this.dialogueRunner.StartDialogue("GameOver");
+                //GoToTitle();
+                goToTitle = true;
             }
             else
             {
-                Debug.Log("Should be going to the shop");
-                GoToShop();
+                this.dialogueRunner.StartDialogue("LoseDialog");
+                goToShop = true;
+                //Debug.Log("Should be going to the shop");
+                //GoToShop();
             }
         }
     }
@@ -96,8 +128,10 @@ public class GameManager : MonoBehaviour
 
     public void GoToShop()
     {
-        this.player.HideSlimes();
+        
         sceneLoader.LoadSpecificScene("shop");
+        this.player.HideSlimes();
+        this.dialogueRunner.StartDialogue("SetupStart");
     }
 
     public void GoToCredits()

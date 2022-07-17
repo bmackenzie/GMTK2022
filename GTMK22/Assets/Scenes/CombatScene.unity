@@ -771,7 +771,7 @@ MonoBehaviour:
   e9: {fileID: 3940213597173582845, guid: ba95846479bec9f46adc399a9bdf83d1, type: 3}
   e10: {fileID: 9099071078669150433, guid: ce3c2fde73a56c24faece3f3f3cd583e, type: 3}
   animator: {fileID: 0}
-  DamageVisualEffects: {fileID: 1131685380106392306, guid: cf2eee3c3cc94c94d962b3422da2038c, type: 3}
+  damageVisualEffectsPrefab: {fileID: 1131685380106392306, guid: cf2eee3c3cc94c94d962b3422da2038c, type: 3}
 --- !u!4 &815379586
 Transform:
   m_ObjectHideFlags: 0

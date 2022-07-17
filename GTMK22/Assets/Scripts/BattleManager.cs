@@ -29,7 +29,6 @@ public class BattleManager : DialoguePauser
     private int playerDamageReduce = 0;
     private bool playerSkipTurn = false;
     private int playerStrength = 0;
-    public static DieDatabase DieLibrary = DieDatabase.CreateFromJSON(AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/JsonData/DieFaces.json").text);
     private int attackStrength = 0;
 
     private void Awake()

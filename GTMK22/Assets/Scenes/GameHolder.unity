@@ -468,6 +468,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6610136018097988440, guid: 8e8d9a08a80e23940ad0fbaaff73de62, type: 3}
+      propertyPath: lineProvider
+      value: 
+      objectReference: {fileID: 1831095454}
     - target: {fileID: 7644436962379354804, guid: 8e8d9a08a80e23940ad0fbaaff73de62, type: 3}
       propertyPath: m_Name
       value: GameController
@@ -522,3 +526,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e8d9a08a80e23940ad0fbaaff73de62, type: 3}
+--- !u!1 &1831095453 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5485759386531965733, guid: 8e8d9a08a80e23940ad0fbaaff73de62, type: 3}
+  m_PrefabInstance: {fileID: 1831095452}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1831095454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831095453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10f0777399ec04ef6957da2ae823eb8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textLanguageCode: en-US

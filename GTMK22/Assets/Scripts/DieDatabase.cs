@@ -19,18 +19,19 @@ public class DieDatabase
         new Effect("Dodge", "Avoid the next {magnitude} hit completely", new Magnitude[2] { new Magnitude(0, 1, "1"), new Magnitude(2, 3, "die value/3 (rounded down)") }),
         new Effect("Stun", "Deal {magnitude} additional damage, but skip your next turn", new Magnitude[2] { new Magnitude(0, 8, "8"), new Magnitude(1, 2, "2Xdie value") }),
         new Effect("Strength", "Deal {magnitude} more damage with every hit", new Magnitude[2] { new Magnitude(0, 2, "2"), new Magnitude(2, 2, "die value/2") }),
-        new Effect("MultiAttack", "Deal {magnitude}", new Magnitude[2] { new Magnitude(0, 2, "dice damage twice this turn"), new Magnitude(3, 2, "(dice damage - 2) three times this turn") })};
+        new Effect("MultiAttack", "Deal {magnitude}", new Magnitude[1] { new Magnitude(0, 2, "dice damage twice this turn")})};
 
 
 
 public BonusGoop GetRandomGoop()
     {
-        int bonus = UnityEngine.Random.Range(0, effects.Length - 1);
-        int mag_ind = UnityEngine.Random.Range(0, effects[bonus].magnitudes.Length - 1);
+        int bonus = UnityEngine.Random.Range(0, effects.Length);
+        int mag_ind = UnityEngine.Random.Range(0, effects[bonus].magnitudes.Length );
         int mag = effects[bonus].magnitudes[mag_ind].value;
+        int rel = effects[bonus].magnitudes[mag_ind].dieRelation;
         string descript = Regex.Replace(effects[bonus].description, "{magnitude}", effects[bonus].magnitudes[mag_ind].description);
         Debug.Log(descript);
-        return new BonusGoop((BonusTypes)bonus, mag, descript);
+        return new BonusGoop((BonusTypes)bonus, mag, rel, descript);
     }
 }
 

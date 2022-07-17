@@ -6,6 +6,16 @@ public class EnemyScaling : Enemy
 {
     private int scaleFactor = 5;
     private int scaleCount = 0;
+
+    public override void Start()
+    {
+        // Initialize values for damage and health
+        // for initial testing purposes
+        maxHealth = 30;
+        ChangeHealth(maxHealth);
+        damage = 1;
+    }
+
     public override int[] TakeTurn()
     {
         // TODO: Do your turn

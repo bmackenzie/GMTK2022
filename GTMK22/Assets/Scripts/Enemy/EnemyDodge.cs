@@ -2,17 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy1 : MonoBehaviour
+public class EnemyDodge : Enemy
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void Start()
     {
-        
+        // Initialize values for damage and health
+        // for initial testing purposes
+        maxHealth = 20;
+        ChangeHealth(maxHealth);
+        damage = 5;
     }
-
-    // Update is called once per frame
-    void Update()
+    public override int[] TakeTurn()
     {
-        
+        // TODO: Do your turn
+        int act = Random.Range(0, 2);
+        if (act == 0)
+        {
+            return new int[] { damage, 0, 0 };
+        }
+        else
+        {
+            Debug.Log("should be adding a dodge");
+            return new int[] { 0, 4, 1 };
+        }
+
     }
 }

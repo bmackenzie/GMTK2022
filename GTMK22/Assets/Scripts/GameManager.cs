@@ -11,6 +11,7 @@ public class GameManager : DialoguePauser
     public SceneLoader sceneLoader;
     public Player playerPrefab;
     public Player player;
+    public GameObject dialogueEventSystem;
     //public static string jsonthing;
     public int rounds { get; private set; }
     private bool goToShop = false;
@@ -43,7 +44,8 @@ public class GameManager : DialoguePauser
         {
             return;
         }
-        if(goToShop)
+        dialogueEventSystem.gameObject.SetActive(false);
+        if (goToShop)
         {
             GoToShop();
             goToShop = false;
@@ -69,6 +71,7 @@ public class GameManager : DialoguePauser
         // instantiate a player
 
         this.player = Instantiate(playerPrefab);
+        dialogueEventSystem.gameObject.SetActive(true);
         this.dialogueRunner.StartDialogue("Start");
         // TODO: Add a name input?
         this.StartBattle();
@@ -79,15 +82,18 @@ public class GameManager : DialoguePauser
         // TODO: Instantiate an enemy
         this.player.ShowSlimes();
         sceneLoader.LoadSpecificScene("CombatScene");
+        dialogueEventSystem.gameObject.SetActive(true);
         this.dialogueRunner.StartDialogue("BattleStart");
+        
     }
     public void EndBattle(bool victory)
     {
 
         if (victory)
         {
-            
+            dialogueEventSystem.gameObject.SetActive(true);
             this.dialogueRunner.StartDialogue("BattleEnd");
+
             
             rounds++;
             
@@ -107,12 +113,14 @@ public class GameManager : DialoguePauser
             
             if (player.lives <= 0)
             {
+                dialogueEventSystem.gameObject.SetActive(true);
                 this.dialogueRunner.StartDialogue("GameOver");
                 //GoToTitle();
                 goToTitle = true;
             }
             else
             {
+                dialogueEventSystem.gameObject.SetActive(true);
                 this.dialogueRunner.StartDialogue("LoseDialog");
                 goToShop = true;
                 //Debug.Log("Should be going to the shop");
@@ -131,6 +139,7 @@ public class GameManager : DialoguePauser
         
         sceneLoader.LoadSpecificScene("shop");
         this.player.HideSlimes();
+        dialogueEventSystem.gameObject.SetActive(true);
         this.dialogueRunner.StartDialogue("SetupStart");
     }
 

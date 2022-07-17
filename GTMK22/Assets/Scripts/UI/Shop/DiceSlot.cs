@@ -13,8 +13,8 @@ public class DiceSlot : MonoBehaviour, IDropHandler
 
     void Awake()
     {
-        //this.slimeDetails = FindObjectOfType<Player>().GetDieDetails(numSides);
-        //hoverTextObject.text = this.slimeDetails.GetFaceInfo();
+        this.slimeDetails = FindObjectOfType<Player>().GetDieDetails(numSides);
+        hoverTextObject.text = this.slimeDetails.GetFaceInfo();
     }
 
         
@@ -36,9 +36,9 @@ public class DiceSlot : MonoBehaviour, IDropHandler
                     menu2.OpenMenu(eventData.pointerDrag);
                     break;
                 default:
-                    //d8Menu = faceSetMenu.GetComponent<d8Menu>();
-                    //d8Menu.gameObject.SetActive(true);
-                    //d8Mmenu.OpenMenu(eventData.pointerDrag);
+                    d8Menu menu3 = faceSetMenu.GetComponent<d8Menu>();
+                    menu3.gameObject.SetActive(true);
+                    menu3.OpenMenu(eventData.pointerDrag);
                     break;
             }
 

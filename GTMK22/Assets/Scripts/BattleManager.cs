@@ -242,39 +242,28 @@ public class BattleManager : DialoguePauser
             switch (action[1])
             {
                 case 0:
-                    Debug.Log("BORING");
                     break;
                 case 1:
                     playerPoison += action[2];
-                    Debug.Log("add poison");
                     break;
                 case 2: //thorn buff
                     enemyThorn += action[2];
-                    Debug.Log("add thorns");
 
                     break;
                 case 3: //Damage Reduction Buff
                     enemyDamageReduce += action[2];
-                    Debug.Log("reduce damage");
                     break;
                 case 4: //Dodge Buff
                     enemyDodgeTurn += action[2];
-                    Debug.Log("dodge");
-
                     break;
                 case 5: //self stun attack
                     enemySkipTurn = true;
-                    Debug.Log("beeg attack");
                     isPlayerDead = player.ChangeHealth(-action[2]);
                     break;
                 case 6: //damage boost
                     enemyStrength += action[2];
-                    Debug.Log("buff strength");
-
                     break;
                 case 7: //additional attacks
-                    Debug.Log("Multi");
-
                     for (int i = 0; i < action[2]; i++)
                     {
                         HurtPlayer(attackStrength);

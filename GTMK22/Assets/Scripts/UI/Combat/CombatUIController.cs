@@ -23,6 +23,7 @@ public class CombatUIController : MonoBehaviour
     public GameObject enemyIcon;
     private int[] speeds = {1,2,4};
     private int speedIndex = -1;
+    private bool attackAnimationComplete = true;
     
 
     private void Awake()
@@ -93,9 +94,24 @@ public class CombatUIController : MonoBehaviour
     public void UpdateSpeedNumber()
     {
         speedIndex ++;
+        speedIndex = speedIndex % 3;
         speedText.text = speeds[speedIndex].ToString() + "X";
         battleManager.updateSpeed = speeds[speedIndex];
         return;
     }
 
+    //public void DrawAttackSymbol()
+    //{
+    //    //Debug.Log("started controller");
+    //    for (int lvs = 1; lvs <= player.maxLives; lvs++)
+    //    {
+    //        //.Log("Lives: " + lvs.ToString());
+    //        GameObject lifeIcon = Instantiate(lifesPrefab);
+    //        lifeIcon.transform.position += new Vector3((lvs - 1) * 1, 0, 0);
+    //        if (lvs > player.lives)
+    //        {
+    //            lifeIcon.GetComponent<SpriteRenderer>().color = Color.black;
+    //        }
+    //    }
+    //}
 }

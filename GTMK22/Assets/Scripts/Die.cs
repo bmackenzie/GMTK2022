@@ -27,11 +27,12 @@ public class Die : MonoBehaviour
         for (int i = 0; i < numSides; i++)
         {
             sideAction[i] = new int[2];
-            sideBonuses[i] = new BonusGoop((BonusTypes)0, 0, "nothing fancy");
+            sideBonuses[i] = new BonusGoop((BonusTypes)0, 0, 0, "nothing fancy");
         }
         // Randomly set a single side with a random bonus
-        sideBonuses[Random.Range(0, numSides - 1)] = dieDatabase.GetRandomGoop();
-
+        int temp = Random.Range(0, numSides - 1);
+        sideBonuses[temp] = dieDatabase.GetRandomGoop();
+        sideBonuses[temp].SetMagnitude(temp);
     }
 
     public string GetFaceInfo()
@@ -44,6 +45,7 @@ public class Die : MonoBehaviour
         if (side > 0 && side <= numSides )
         {
             sideBonuses[side] = action;
+            sideBonuses[side].SetMagnitude(side);
         }
         else
         {

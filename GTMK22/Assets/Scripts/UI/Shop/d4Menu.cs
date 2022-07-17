@@ -21,6 +21,11 @@ public class d4Menu : MonoBehaviour
     void Awake()
     {
         slimeDetails = slime.slimeDetails;
+        RedrawMenu();
+    }
+
+    void RedrawMenu()
+    {
         desc1.text = slimeDetails.sideBonuses[0].description;
         if (slimeDetails.sideBonuses[0].description != "nothing fancy")
         {
@@ -48,12 +53,12 @@ public class d4Menu : MonoBehaviour
             slot4.interactable = false;
 
         }
-
     }
 
     public void OpenMenu(GameObject active)
     {
         activeFace = active;
+        RedrawMenu();
     }
 
 
@@ -86,8 +91,9 @@ public class d4Menu : MonoBehaviour
     void UpdateFace(int position)
     {
         Debug.Log("firing");
-        slimeDetails.sideBonuses[position] = activeFace.GetComponent<RenderFaceEffectIcon>().faceEffect;
-        slimeDetails.sideBonuses[position].SetMagnitude(position);
+        //slimeDetails.sideBonuses[position] = activeFace.GetComponent<RenderFaceEffectIcon>().faceEffect;
+        //slimeDetails.sideBonuses[position].SetMagnitude(position);
+        slimeDetails.ChangeSide(position, activeFace.GetComponent<RenderFaceEffectIcon>().faceEffect);
         Destroy(activeFace);
         CloseMenu();
     }

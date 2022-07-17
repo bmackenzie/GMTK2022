@@ -62,21 +62,21 @@ public class GameManager : MonoBehaviour
         {
             switch (rounds)
             {
-                case 1:
-                    this.dialogueRunner.StartDialogue(dialogueNodes[0]);
-                    break;
-                case 4:
-                    this.dialogueRunner.StartDialogue(dialogueNodes[1]);
-                    break;
-                case 8:
-                    this.dialogueRunner.StartDialogue(dialogueNodes[2]);
-                    break;
-                case 9:
-                    this.dialogueRunner.StartDialogue(dialogueNodes[3]);
-                    break;
-                case 10:
-                    this.dialogueRunner.StartDialogue(dialogueNodes[4]);
-                    break;
+                //case 1:
+                //    this.dialogueRunner.StartDialogue(dialogueNodes[0]);
+                //    break;
+                //case 4:
+                //    this.dialogueRunner.StartDialogue(dialogueNodes[1]);
+                //    break;
+                //case 8:
+                //    this.dialogueRunner.StartDialogue(dialogueNodes[2]);
+                //    break;
+                //case 9:
+                //    this.dialogueRunner.StartDialogue(dialogueNodes[3]);
+                //    break;
+                //case 10:
+                //    this.dialogueRunner.StartDialogue(dialogueNodes[4]);
+                //    break;
                 default:
                     this.dialogueRunner.StartDialogue("BattleEnd");
                     break;

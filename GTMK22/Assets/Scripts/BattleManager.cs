@@ -163,6 +163,8 @@ public class BattleManager : DialoguePauser
         if (!playerSkipTurn)
         {
             action = player.dice[dieNumber].RollDie();
+            dieNumber++;
+            dieNumber = dieNumber % 3;
             if (action[0] > 0)
             {
                 attackStrength = Mathf.Min(-action[0] - playerStrength + enemyDamageReduce, 0);
@@ -188,6 +190,7 @@ public class BattleManager : DialoguePauser
                     break;
                 case 5: //self stun attack
                     playerSkipTurn = true;
+                    isEnemyDead = enemy.ChangeHealth(-enemyPoison);
                     break;
                 case 6: //increase damage
                     playerStrength += action[2];
@@ -200,6 +203,10 @@ public class BattleManager : DialoguePauser
                     wasAttacked = true;
                     break;
             }
+        }
+        else
+        {
+            playerSkipTurn = false;
         }
 
         if (playerPoison > 0)
@@ -237,7 +244,6 @@ public class BattleManager : DialoguePauser
                     break;
                 case 1:
                     playerPoison += action[2];
-                    isPlayerDead = player.ChangeHealth(-playerPoison);
                     break;
                 case 2: //thorn buff
                     enemyThorn += action[2];
@@ -250,6 +256,7 @@ public class BattleManager : DialoguePauser
                     break;
                 case 5: //self stun attack
                     enemySkipTurn = true;
+                    isPlayerDead = player.ChangeHealth(-playerPoison);
                     break;
                 case 6: //damage boost
                     enemyStrength += action[2];
@@ -264,7 +271,10 @@ public class BattleManager : DialoguePauser
             }
 
         }
-
+        else
+        {
+            enemySkipTurn = false;
+        }
         if (enemyPoison > 0)
         {
             isEnemyDead = enemy.ChangeHealth(-enemyPoison);
@@ -306,8 +316,6 @@ public class BattleManager : DialoguePauser
         else
         {
             isEnemyDead = enemy.ChangeHealth(damage);
-            Debug.Log("Enemy Health");
-            Debug.Log(enemy.health);
             if (enemyThorn > 0)
             {
                 isPlayerDead = player.ChangeHealth(-enemyThorn);

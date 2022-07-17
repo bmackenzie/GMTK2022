@@ -19,6 +19,13 @@ public class EnemyHealthBar : MonoBehaviour
     public void Update() 
     {
         //Debug.Log("updating enemy healthbar: "+ Mathf.Clamp((float)enemy.health / enemy.maxHealth, 0.0f, 1.0f).ToString());
-        healthBarImage.fillAmount = Mathf.Clamp((float)enemy.health /enemy.maxHealth, 0.0f, 1.0f);
+        try
+        {
+            healthBarImage.fillAmount = Mathf.Clamp((float)enemy.health / enemy.maxHealth, 0.0f, 1.0f);
+        }
+        catch
+        {
+            enemy = FindObjectOfType<Enemy>();
+        }
     }
 }

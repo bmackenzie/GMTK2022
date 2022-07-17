@@ -33,13 +33,13 @@ public class Die : MonoBehaviour
         int temp = Random.Range(0, numSides - 1);
         sideBonuses[temp] = dieDatabase.GetRandomGoop();
         sideBonuses[temp].SetMagnitude(temp);
-        for (int i = 0; i < numSides; i++)
-        {
-            Debug.Log("Player dice sides");
-            Debug.Log(sideBonuses[i].bonusType);
-            Debug.Log(sideBonuses[i].magnitude);
-            Debug.Log(sideBonuses[i].description);
-        }
+        //for (int i = 0; i < numSides; i++)
+        //{
+        //    Debug.Log("Player dice sides");
+        //    Debug.Log(sideBonuses[i].bonusType);
+        //    Debug.Log(sideBonuses[i].magnitude);
+        //    Debug.Log(sideBonuses[i].description);
+        //}
     }
 
     public string GetFaceInfo()
@@ -65,10 +65,6 @@ public class Die : MonoBehaviour
     {
         int currentFace = Random.Range(0, numSides-1);
         BonusGoop currentAction = sideBonuses[currentFace];
-        Debug.Log("Player dice action");
-        Debug.Log(currentFace);
-        Debug.Log((int)currentAction.bonusType);
-        Debug.Log(currentAction.magnitude);
         return new int[] {currentFace+1, (int)currentAction.bonusType, currentAction.magnitude};
     }
 

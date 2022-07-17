@@ -16,7 +16,7 @@ public class EnemyBoss : Enemy
     public override int[] TakeTurn()
     {
         // TODO: Do your turn
-        int act = Random.Range(0, 2);
+        int act = Random.Range(0, 8);
         
         switch (act)
         {

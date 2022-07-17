@@ -20,17 +20,17 @@ title: BattleEnd
 tags: 
 ---
 <<if $currentRound == 1>>
-    [[Round1End]]
+    <<jump Round1End>>
 <<elseif $currentRound == 2>>
-    [[Round2End]]
+    <<jump Round2End>>
 <<elseif $currentRound == 4>>
-    [[Round4End]]
+    <<jump Round4End>>
 <<elseif $currentRound == 8>>
-    [[Round8End]]
+    <<jump Round8End>>
 <<elseif $currentRound == 9>>
-    [[Round9End]]
+    <<jump Round9End>>
 <<elseif $currentRound == 10>>
-    [[Round10End]]
+    <<jump Round10End>>
 <<else>>
     <<set $currentRound to $currentRound + 1>>
 <<endif>>

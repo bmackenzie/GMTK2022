@@ -118,6 +118,7 @@ public class BattleManager : DialoguePauser
         }
 
         enemy = FindObjectOfType<Enemy>();
+        player.SetStartingHealth();
     }
 
     void Start()

@@ -44,8 +44,8 @@ public class BattleManager : DialoguePauser
         switch (gameManager.rounds)
         {
             case 1:
-                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyBoss.prefab", typeof(GameObject)));
-                Debug.Log("loaded Enemy Boss prefab");
+                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyBase.prefab", typeof(GameObject)));
+                Debug.Log("loaded Enemy Base prefab");
                 break;
             case 2:
                 test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyDodge.prefab", typeof(GameObject)));

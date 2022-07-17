@@ -6,17 +6,17 @@ using UnityEditor;
 
 public class GameManager : MonoBehaviour
 {
-    public TextAsset jsonFile;
+    //public TextAsset jsonFile;
     public DialogueRunner dialogueRunner;
     public SceneLoader sceneLoader;
     public Player playerPrefab;
     public Player player;
-    public static string jsonthing;
+    //public static string jsonthing;
     public int rounds { get; private set; }
 
-    [SerializeField] private string[] dialogueNodes;
+    //[SerializeField] private string[] dialogueNodes;
 
-    [MenuItem("AssetDatabase/LoadAssetExample")]
+    //[MenuItem("AssetDatabase/LoadAssetExample")]
     private void Awake()
     {
         this.dialogueRunner = this.GetComponentInChildren<DialogueRunner>();
@@ -60,27 +60,9 @@ public class GameManager : MonoBehaviour
 
         if (victory)
         {
-            switch (rounds)
-            {
-                //case 1:
-                //    this.dialogueRunner.StartDialogue(dialogueNodes[0]);
-                //    break;
-                //case 4:
-                //    this.dialogueRunner.StartDialogue(dialogueNodes[1]);
-                //    break;
-                //case 8:
-                //    this.dialogueRunner.StartDialogue(dialogueNodes[2]);
-                //    break;
-                //case 9:
-                //    this.dialogueRunner.StartDialogue(dialogueNodes[3]);
-                //    break;
-                //case 10:
-                //    this.dialogueRunner.StartDialogue(dialogueNodes[4]);
-                //    break;
-                default:
-                    this.dialogueRunner.StartDialogue("BattleEnd");
-                    break;
-            }
+            
+            this.dialogueRunner.StartDialogue("BattleEnd");
+            
             rounds++;
             if (rounds <= 10)
             {

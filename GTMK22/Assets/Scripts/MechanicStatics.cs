@@ -29,12 +29,10 @@ public class BonusGoop
         this.gooStrength = mag;
         this.description = desc;
         this.dieRelation = relation;
-        Debug.Log("goo strength " + this.gooStrength + " and die relation " + this.dieRelation);
     }
 
     public void SetMagnitude(int dieFace)
     {
-        Debug.Log("goo strength " + this.gooStrength + " and die relation " + this.dieRelation);
         // We expect to be given the index of the dieface, not the actual value on the face ie. the face with 3 dots should have dieFace=2
         switch (this.dieRelation)
         {

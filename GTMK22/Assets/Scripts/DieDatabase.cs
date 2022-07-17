@@ -27,8 +27,6 @@ public BonusGoop GetRandomGoop()
         int mag_ind = UnityEngine.Random.Range(0, effects[bonus].magnitudes.Length );
         int mag = effects[bonus].magnitudes[mag_ind].value;
         int rel = effects[bonus].magnitudes[mag_ind].dieRelation;
-        Debug.Log(rel);
-        Debug.Log(mag);
         string descript = Regex.Replace(effects[bonus].description, "{magnitude}", effects[bonus].magnitudes[mag_ind].description);
         return new BonusGoop((BonusTypes)bonus+1, mag, rel, descript);
     }

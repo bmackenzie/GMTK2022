@@ -30,10 +30,51 @@ public class BattleManager : DialoguePauser
     private bool playerSkipTurn = false;
     private int playerStrength = 0;
     private int attackStrength = 0;
+    private bool wasAttacked = false;
+    private GameManager gameManager;
+    private GameObject test1;
+
+
+
 
     private void Awake()
     {
+        gameManager = FindObjectOfType<GameManager>();
         player = FindObjectOfType<Player>();
+        switch (gameManager.rounds)
+        {
+            case 0:
+                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyBase.prefab", typeof(GameObject)));
+                Debug.Log("loaded Enemy Base prefab");
+                break;
+            case 1:
+                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyScaling.prefab", typeof(GameObject)));
+                break;
+            case 2:
+                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyThorns.prefab", typeof(GameObject)));
+                break;
+            case 3:
+                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyHeavy.prefab", typeof(GameObject)));
+                break;
+            case 4:
+                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyPoison.prefab", typeof(GameObject)));
+                break;
+            case 5:
+                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyBase.prefab", typeof(GameObject)));
+                break;
+            case 6:
+                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Enemy6.prefab", typeof(GameObject)));
+                break;
+            case 7:
+                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyTank.prefab", typeof(GameObject)));
+                break;
+            case 8:
+                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyMulti.prefab", typeof(GameObject)));
+                break;
+            case 9:
+                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyBoss.prefab", typeof(GameObject)));
+                break;
+        }
         enemy = FindObjectOfType<Enemy>();
     }
 
@@ -104,6 +145,7 @@ public class BattleManager : DialoguePauser
             {
                 attackStrength = Mathf.Min(-action[0] - playerStrength + enemyDamageReduce, 0);
                 HurtEnemy(attackStrength);
+                wasAttacked = true;
             }
             
             switch (action[1])
@@ -133,6 +175,7 @@ public class BattleManager : DialoguePauser
                     {
                         HurtEnemy(attackStrength);
                     }
+                    wasAttacked = true;
                     break;
             }
         }
@@ -142,8 +185,12 @@ public class BattleManager : DialoguePauser
             player.ChangeHealth(-playerPoison);
             playerPoison -= 1;
         }
-
-        enemyDamageReduce = 0;
+        if (wasAttacked)
+        {
+            enemyDamageReduce = 0;
+            wasAttacked = false;
+        }
+        
     }
 
     void TakeEnemyTurn()
@@ -155,6 +202,7 @@ public class BattleManager : DialoguePauser
             {
                 attackStrength = Mathf.Min(-action[0] - enemyStrength + playerDamageReduce, 0);
                 HurtPlayer(attackStrength);
+                wasAttacked = true;
             }
             else
             {
@@ -189,6 +237,7 @@ public class BattleManager : DialoguePauser
                     {
                         HurtPlayer(attackStrength);
                     }
+                    wasAttacked = true;
                     break;
             }
 
@@ -199,8 +248,11 @@ public class BattleManager : DialoguePauser
             isEnemyDead = enemy.ChangeHealth(-enemyPoison);
             enemyPoison -= 1;
         }
-
-        playerDamageReduce = 0;
+        if (wasAttacked)
+        {
+            playerDamageReduce = 0;
+            wasAttacked = false;
+        }
 
     }
 

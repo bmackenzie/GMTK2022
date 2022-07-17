@@ -58,6 +58,10 @@ public class Die : MonoBehaviour
     {
         int currentFace = Random.Range(0, numSides-1);
         BonusGoop currentAction = sideBonuses[currentFace];
+        Debug.Log("Player dice action");
+        Debug.Log(currentFace);
+        Debug.Log((int)currentAction.bonusType);
+        Debug.Log(currentAction.magnitude);
         return new int[] {currentFace, (int)currentAction.bonusType, currentAction.magnitude};
     }
 

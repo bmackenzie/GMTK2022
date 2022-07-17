@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyThorns : Enemy
+public class EnemyMulti : Enemy
 {
+    public bool attacking = false;
     public override void Start()
     {
         // Initialize values for damage and health
@@ -15,15 +16,15 @@ public class EnemyThorns : Enemy
     public override int[] TakeTurn()
     {
         // TODO: Do your turn
-        int act = Random.Range(0, 2);
-        if (act == 0)
+        if (attacking)
         {
-            return new int[] { damage, 0, 0 };
+            Debug.Log("MultiAttack");
+            return new int[] { 0, 7, 3 };
         }
         else
         {
-            Debug.Log("should be increasing the thorn strength");
-            return new int[] { 0, 2, 2};
+            Debug.Log("Buffing Strength");
+            return new int[] { 0, 6, 1 };
         }
 
     }

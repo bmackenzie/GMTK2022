@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 27, y: -9}
-  m_SizeDelta: {x: 687.835, y: 297.0051}
+  m_AnchoredPosition: {x: 30.617, y: -0.00039673}
+  m_SizeDelta: {x: 1239.8, y: 732}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &460527458
 MonoBehaviour:
@@ -181,7 +181,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "Developed By:\nNigel Swenson\nRyan Quick\nBrian Mackenzie\nRhian Preston\n\nArt
+    By: \nMeghan Grant\n\nThird Party Assets:\nMenu UI: PaperHatLizard\n\nMusic:\n\"Doobly
+    Doo\" Kevin MacLeod (incompetech.com)\r\nLicensed under Creative Commons: By
+    Attribution 4.0 License\r\nhttp://creativecommons.org/licenses/by/4.0/\r\n\r\n\"Battle
+    of the Pogs\" by Komiku\r\nLicensed under Creative Commons: 1.0 Universal License\r\nhttps://creativecommons.org/publicdomain/zero/1.0/\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0642ab376cd5dd247a758d066d84303f, type: 2}
   m_sharedMaterial: {fileID: -445152148715603044, guid: 0642ab376cd5dd247a758d066d84303f, type: 2}

@@ -34,6 +34,11 @@ public class Die : MonoBehaviour
 
     }
 
+    public string GetFaceInfo()
+    {
+        return "Fill this with the info on the faces";
+    }
+
     public void ChangeSide(int side, BonusGoop action)
     {
         if (side > 0 && side <= numSides )

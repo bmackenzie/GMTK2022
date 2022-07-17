@@ -273,6 +273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numSides: 8
+  hoverTextObject: {fileID: 560831786}
 --- !u!1 &54729848
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,7 +891,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Dice Stats
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0642ab376cd5dd247a758d066d84303f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -954,7 +955,7 @@ MonoBehaviour:
   m_margin: {x: 55.84027, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &441116690
@@ -1393,6 +1394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numSides: 6
+  hoverTextObject: {fileID: 441116687}
 --- !u!224 &472128889 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8347847427062133523, guid: 2500d4281d567a44d88b726a90049146, type: 3}
@@ -1458,7 +1460,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Dice Stats
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0642ab376cd5dd247a758d066d84303f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1522,7 +1524,7 @@ MonoBehaviour:
   m_margin: {x: 55.84027, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &480980556
@@ -1747,7 +1749,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Dice Stats
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0642ab376cd5dd247a758d066d84303f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1811,7 +1813,7 @@ MonoBehaviour:
   m_margin: {x: 55.84027, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &499974348
@@ -1892,7 +1894,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Dice Stats
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0642ab376cd5dd247a758d066d84303f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1956,7 +1958,7 @@ MonoBehaviour:
   m_margin: {x: 55.84027, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &560831789
@@ -2586,9 +2588,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845637108}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1182000153}
@@ -2621,8 +2623,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Dice Stats
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0642ab376cd5dd247a758d066d84303f, type: 2}
+  m_sharedMaterial: {fileID: -445152148715603044, guid: 0642ab376cd5dd247a758d066d84303f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3280,7 +3282,7 @@ GameObject:
   - component: {fileID: 1182000155}
   - component: {fileID: 1182000154}
   m_Layer: 5
-  m_Name: Hover Panel
+  m_Name: Hover d4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3886,7 +3888,7 @@ GameObject:
   - component: {fileID: 1414728329}
   - component: {fileID: 1414728328}
   m_Layer: 5
-  m_Name: Hover Panel
+  m_Name: Hover d8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4101,6 +4103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numSides: 4
+  hoverTextObject: {fileID: 845637108}
 --- !u!1 &1435152842
 GameObject:
   m_ObjectHideFlags: 0
@@ -4190,7 +4193,7 @@ GameObject:
   - component: {fileID: 1459856036}
   - component: {fileID: 1459856035}
   m_Layer: 5
-  m_Name: Hover Panel
+  m_Name: Hover d6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

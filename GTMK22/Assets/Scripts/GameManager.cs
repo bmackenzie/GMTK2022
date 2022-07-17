@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
     public void StartBattle()
     {
         // TODO: Instantiate an enemy
-
+        this.player.ShowSlimes();
         sceneLoader.LoadSpecificScene("CombatScene");
     }
     public void EndBattle(bool victory)
@@ -64,6 +64,7 @@ public class GameManager : MonoBehaviour
             this.dialogueRunner.StartDialogue("BattleEnd");
             
             rounds++;
+            
             if (rounds <= 10)
             {
                 GoToShop();
@@ -95,6 +96,7 @@ public class GameManager : MonoBehaviour
 
     public void GoToShop()
     {
+        this.player.HideSlimes();
         sceneLoader.LoadSpecificScene("shop");
     }
 

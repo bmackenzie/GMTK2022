@@ -113,6 +113,22 @@ public class Player : MonoBehaviour
         dice.RemoveAt(position);
     }
 
+    public void HideSlimes()
+    {
+        for(int i = 0; i < this.dice.Count; i++)
+        {
+            this.dice[i].GetComponent<SpriteRenderer>().enabled = false;
+        }
+    }
+
+    public void ShowSlimes()
+    {
+        for (int i = 0; i < this.dice.Count; i++)
+        {
+            this.dice[i].GetComponent<SpriteRenderer>().enabled = true;
+        }
+    }
+
     public void GameOver()
     {
         //call sceneloader to load gameover scene

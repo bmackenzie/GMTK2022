@@ -51,7 +51,7 @@ public class CombatUIController : MonoBehaviour
         for(int lvs=1;lvs <= player.maxLives; lvs++)
         {
             //.Log("Lives: " + lvs.ToString());
-            GameObject lifeIcon = Instantiate(lifesPrefab);
+            GameObject lifeIcon = Instantiate(lifesPrefab, this.transform);
             lifeIcon.transform.position += new Vector3((lvs-1)*1, 0, 0);
             if(lvs > player.lives)
             {

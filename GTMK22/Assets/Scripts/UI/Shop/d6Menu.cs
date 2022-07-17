@@ -3,17 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class d4Menu : MonoBehaviour
+public class d6Menu : MonoBehaviour
 {
     [SerializeField] private DiceSlot slime;
     [SerializeField] private Button slot1;
     [SerializeField] private Button slot2;
     [SerializeField] private Button slot3;
     [SerializeField] private Button slot4;
+    [SerializeField] private Button slot5;
+    [SerializeField] private Button slot6;
     [SerializeField] private TMPro.TMP_Text desc1;
     [SerializeField] private TMPro.TMP_Text desc2;
     [SerializeField] private TMPro.TMP_Text desc3;
     [SerializeField] private TMPro.TMP_Text desc4;
+    [SerializeField] private TMPro.TMP_Text desc5;
+    [SerializeField] private TMPro.TMP_Text desc6;
     private GameObject activeFace;
 
     private Die slimeDetails;
@@ -62,6 +66,26 @@ public class d4Menu : MonoBehaviour
             desc4.text = "empty";
         }
 
+        try
+        {
+            desc5.text = slimeDetails.sideBonuses[4].description;
+            slot5.interactable = false;
+        }
+        catch
+        {
+            desc5.text = "empty";
+        }
+
+        try
+        {
+            desc6.text = slimeDetails.sideBonuses[5].description;
+            slot6.interactable = false;
+        }
+        catch
+        {
+            desc6.text = "empty";
+        }
+
     }
 
     public void OpenMenu(GameObject active)
@@ -94,6 +118,16 @@ public class d4Menu : MonoBehaviour
     public void Slot4Click()
     {
         UpdateFace(3);
+    }
+
+    public void Slot5Click()
+    {
+        UpdateFace(4);
+    }
+
+    public void Slot6Click()
+    {
+        UpdateFace(5);
     }
 
     void UpdateFace(int position)

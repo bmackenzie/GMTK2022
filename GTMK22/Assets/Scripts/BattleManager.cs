@@ -97,6 +97,7 @@ public class BattleManager : DialoguePauser
                 break;
 
         }
+        test1.transform.position += new Vector3(5, 0, 0);
         enemy = FindObjectOfType<Enemy>();
     }
 

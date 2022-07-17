@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numSides: 8
-  hoverTextObject: {fileID: 560831786}
+  hoverTextObject: {fileID: 560831788}
 --- !u!1 &54729848
 GameObject:
   m_ObjectHideFlags: 0
@@ -1394,7 +1394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numSides: 6
-  hoverTextObject: {fileID: 441116687}
+  hoverTextObject: {fileID: 441116689}
 --- !u!224 &472128889 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8347847427062133523, guid: 2500d4281d567a44d88b726a90049146, type: 3}
@@ -3991,7 +3991,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 72.305, y: -57.745}
+  m_AnchoredPosition: {x: 72.30499, y: -57.745}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1422927010
@@ -4103,7 +4103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numSides: 4
-  hoverTextObject: {fileID: 845637108}
+  hoverTextObject: {fileID: 845637110}
 --- !u!1 &1435152842
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,8 +8,9 @@ public class GetRoundText : MonoBehaviour
     private int roundNum = 0;
     private void Awake()
     {
+        var textContainer = GetComponent<TMPro.TMP_Text>();
         roundNum = FindObjectOfType<GameManager>().rounds;
-        GetComponent<Text>().text = (roundNum - 1).ToString();
+        textContainer.text = (roundNum - 1).ToString();
     }
     // Start is called before the first frame update
     void Start()

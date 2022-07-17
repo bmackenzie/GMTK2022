@@ -647,7 +647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8588236, g: 0.8117648, b: 0.23529413, a: 1}
+  m_Color: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 0.49803922}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1770,6 +1770,10 @@ PrefabInstance:
     - target: {fileID: 1131685380106392306, guid: cf2eee3c3cc94c94d962b3422da2038c, type: 3}
       propertyPath: m_Name
       value: DamageVisualEffects
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131685380106392306, guid: cf2eee3c3cc94c94d962b3422da2038c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1131685380106392309, guid: cf2eee3c3cc94c94d962b3422da2038c, type: 3}
       propertyPath: m_RootOrder

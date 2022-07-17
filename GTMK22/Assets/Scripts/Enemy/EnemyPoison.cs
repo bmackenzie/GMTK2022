@@ -18,15 +18,7 @@ public class EnemyPoison : Enemy
     public override int[] TakeTurn()
     {
         // TODO: Do your turn
-        int act = Random.Range(0, 2);
-        if (act == 0)
-        {
-            return new int[] { damage, 0, 0 };
-        }
-        else
-        {
-            return new int[] { 0, 1, poisonStrength };
-        }
+        return new int[] { damage, 1, poisonStrength };
 
     }
 }

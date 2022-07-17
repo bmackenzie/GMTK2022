@@ -11,7 +11,7 @@ public class EnemyBoss : Enemy
         // for initial testing purposes
         maxHealth = 100;
         ChangeHealth(maxHealth);
-        damage = 3;
+        damage = 2;
     }
     public override int[] TakeTurn()
     {

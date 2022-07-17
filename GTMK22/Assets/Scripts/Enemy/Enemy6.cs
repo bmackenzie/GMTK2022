@@ -19,12 +19,12 @@ public class Enemy6 : Enemy
         if (act == 0)
         {
             Debug.Log("Dodging");
-            return new int[] { 0, 4, 1 };
+            return new int[] { damage, 4, 1 };
         }
         else
         {
             Debug.Log("Beeg hit");
-            return new int[] { 0, 5, 15 };
+            return new int[] { damage, 5, 15 };
         }
 
     }

@@ -24,6 +24,11 @@ public class d6Menu : MonoBehaviour
 
     void Awake()
     {
+        UpdateMenu();
+    }
+
+    void UpdateMenu()
+    {
         slimeDetails = slime.slimeDetails;
         desc1.text = slimeDetails.sideBonuses[0].description;
         if (slimeDetails.sideBonuses[0].description != "nothing fancy")
@@ -66,7 +71,6 @@ public class d6Menu : MonoBehaviour
             slot6.interactable = false;
 
         }
-
     }
 
     public void OpenMenu(GameObject active)
@@ -79,6 +83,7 @@ public class d6Menu : MonoBehaviour
     {
         gameObject.SetActive(false);
         slimeDetails = slime.slimeDetails;
+        UpdateMenu();
     }
 
     public void Slot1Click()

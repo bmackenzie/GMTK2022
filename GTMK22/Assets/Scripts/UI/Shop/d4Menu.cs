@@ -64,9 +64,9 @@ public class d4Menu : MonoBehaviour
 
     }
 
-    public void OpenMenu()
+    public void OpenMenu(GameObject active)
     {
-        desc1.text = slimeDetails.sideBonuses[0].description;
+        activeFace = active;
     }
 
 

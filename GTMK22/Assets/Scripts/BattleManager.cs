@@ -43,6 +43,7 @@ public class BattleManager : DialoguePauser
     public GameObject e9;
     public GameObject e10;
     public DamageVisualEffects animator;
+    public GameObject damageVisualEffectsPrefab;
 
     private void Awake()
     {
@@ -223,6 +224,7 @@ public class BattleManager : DialoguePauser
                     wasAttacked = true;
                     break;
             }
+            Instantiate(damageVisualEffectsPrefab, new Vector3(-2, 0, 0), Quaternion.identity);
             animator.UpdateDamageNumbers(action[0],action[1],action[2]);
 
         }
@@ -293,6 +295,8 @@ public class BattleManager : DialoguePauser
                     wasAttacked = true;
                     break;
                 }
+            Debug.Log("made it here");
+            Instantiate(damageVisualEffectsPrefab, new Vector3(2, 0, 0), Quaternion.identity);
             animator.UpdateDamageNumbers(action[0],action[1],action[2]);
             }
         else

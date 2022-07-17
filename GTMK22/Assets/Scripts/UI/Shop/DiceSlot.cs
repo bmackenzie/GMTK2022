@@ -16,17 +16,12 @@ public class DiceSlot : MonoBehaviour, IDropHandler
         hoverTextObject.text = this.slimeDetails.GetFaceInfo();
     }
 
-
-    // add in order of die to slime details to be read in battle manager
-
         
     public void OnDrop(PointerEventData eventData)
     {
-        if(eventData.pointerDrag != null)
-        {
-            Destroy(eventData.pointerDrag);
-            hoverTextObject.text = this.slimeDetails.GetFaceInfo();
-        }
+    return;
+
+    // This could be location for handoff between shop faces added and die info
     }
 
     public void OnDestroy()

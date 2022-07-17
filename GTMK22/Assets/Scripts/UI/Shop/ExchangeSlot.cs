@@ -12,6 +12,7 @@ public class ExchangeSlot : MonoBehaviour, IDropHandler
         isOccupied = false;
     }
 
+    
     public void OnDrop(PointerEventData eventData)
     {
         if (eventData.pointerDrag != null & !isOccupied)

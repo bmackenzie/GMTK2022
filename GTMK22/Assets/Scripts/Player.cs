@@ -21,9 +21,9 @@ public class Player : MonoBehaviour
         
         money = 0;
         maxHealth = 50;
-        maxLives = 6;
+        maxLives = 3;
         ChangeHealth(maxHealth);
-        //ChangeLives(maxLives);
+        ChangeLives(maxLives);
         // Pick up a random starting bit
         this.bits.Add(dieDatabase.GetRandomGoop());
     }

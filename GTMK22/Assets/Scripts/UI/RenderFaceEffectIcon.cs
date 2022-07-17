@@ -20,6 +20,12 @@ public class RenderFaceEffectIcon : MonoBehaviour
         
     }
 
+    public void MakeEmpty()
+    {
+        faceEffect = null;
+        GetComponent<Image>().color = Color.black;
+    }
+
     public void UpdateFaceEffect(BonusGoop newEffect)
     {
         faceEffect = newEffect;

@@ -49,7 +49,7 @@ public class BattleManager : DialoguePauser
     {
         gameManager = FindObjectOfType<GameManager>();
         player = FindObjectOfType<Player>();
-        animator = FindObjectOfType<DamageVisualEffects>();
+        //animator = FindObjectOfType<DamageVisualEffects>();
         switch (gameManager.rounds)
         {
             case 1:
@@ -227,8 +227,8 @@ public class BattleManager : DialoguePauser
                     wasAttacked = true;
                     break;
             }
-            Instantiate(damageVisualEffectsPrefab, new Vector3(-2, 0, 0), Quaternion.identity);
-            animator.UpdateDamageNumbers(action[0],action[1],action[2]);
+            var damageStuff = Instantiate(damageVisualEffectsPrefab, new Vector3(-2, 0, 0), Quaternion.identity);
+            damageStuff.GetComponentInChildren<DamageVisualEffects>().UpdateDamageNumbers(action[0],action[1],action[2]);
 
         }
         else
@@ -299,8 +299,8 @@ public class BattleManager : DialoguePauser
                     break;
             }
             Debug.Log("made it here");
-            Instantiate(damageVisualEffectsPrefab, new Vector3(2, 0, 0), Quaternion.identity);
-            animator.UpdateDamageNumbers(action[0],action[1],action[2]);
+            var damageStuff = Instantiate(damageVisualEffectsPrefab, new Vector3(2, 0, 0), Quaternion.identity);
+            damageStuff.GetComponentInChildren<DamageVisualEffects>().UpdateDamageNumbers(action[0],action[1],action[2]);
         }
         else
         {

@@ -1863,5 +1863,9 @@ PrefabInstance:
       propertyPath: faceEffectIconList.Array.data[6]
       value: 
       objectReference: {fileID: 21300000, guid: ca3b12a04f2e69c4cb0f19b8b983130d, type: 3}
+    - target: {fileID: 8631831068643950248, guid: cf2eee3c3cc94c94d962b3422da2038c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf2eee3c3cc94c94d962b3422da2038c, type: 3}

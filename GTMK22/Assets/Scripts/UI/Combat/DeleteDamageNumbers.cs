@@ -6,6 +6,6 @@ public class DeleteDamageNumbers : MonoBehaviour
 {
     public void DestroyNumParent()
     {
-        Destroy(this.gameObject);
+        Destroy(this.gameObject);//.transform.parent.gameObject);
     }
 }

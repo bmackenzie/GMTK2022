@@ -31,7 +31,7 @@ public class DamageVisualEffects : MonoBehaviour
         effectColors.Add(new Color(0.6f,0.8980393f,0.3137255f)); // green
         effectColors.Add(new Color(0.9490197f,0.5058824f,0.1843137f)); // orange
         effectColors.Add(new Color(0.6862745f,0.2313726f,0.2509804f)); // red
-        UpdateDamageNumbers(6,4,2);
+        //UpdateDamageNumbers(6,4,2);
     }
 
     void Update()
@@ -42,13 +42,14 @@ public class DamageVisualEffects : MonoBehaviour
 
     public void UpdateDamageNumbers(int baseDamage, int bonusType, int bonusDamage )
     {
+    Debug.Log(baseDamage + bonusType + bonusDamage);
     baseDamageShadowText.text = baseDamage.ToString();
     bonusDamageShadowText.text = bonusDamage.ToString();
     baseDamageText.text = baseDamage.ToString();
     bonusDamageText.text = bonusDamage.ToString();
     bonusDamageText.color = effectColors[bonusType];
-    renderFaceEffecIconShadow.UpdateCombatEffectShadow(bonusType);
-    renderFaceEffecIcon.UpdateCombatEffect(bonusType);
+    renderFaceEffecIconShadow.UpdateCombatEffectShadow(bonusType-1);
+    renderFaceEffecIcon.UpdateCombatEffect(bonusType-1);
 
 
     }

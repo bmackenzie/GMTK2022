@@ -44,7 +44,19 @@ public class Die : MonoBehaviour
 
     public string GetFaceInfo()
     {
-        return "Fill this with the info on the faces";
+        int magnitude;
+        BonusTypes bonusType;
+        string returnString = "";
+        for (int i =0; i < numSides; i++)
+        {
+            magnitude = sideBonuses[i].magnitude;
+            bonusType = sideBonuses[i].bonusType;
+            if (bonusType != 0)
+            {
+                returnString = returnString + "\nSide " + i + 1 + "has bonus of " + bonusType + " with magnitude " + magnitude;
+            }
+        }
+        return returnString;
     }
 
     public void ChangeSide(int side, BonusGoop action)

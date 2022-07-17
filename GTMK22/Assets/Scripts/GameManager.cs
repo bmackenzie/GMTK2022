@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public static string jsonthing;
     public int rounds { get; private set; }
 
+    [SerializeField] private string[] dialogueNodes;
+
     [MenuItem("AssetDatabase/LoadAssetExample")]
     private void Awake()
     {
@@ -56,16 +58,43 @@ public class GameManager : MonoBehaviour
     public void EndBattle(bool victory)
     {
 
-        if(victory)
+        if (victory)
         {
+            switch (rounds)
+            {
+                case 1:
+                    this.dialogueRunner.StartDialogue(dialogueNodes[0]);
+                    break;
+                case 4:
+                    this.dialogueRunner.StartDialogue(dialogueNodes[1]);
+                    break;
+                case 8:
+                    this.dialogueRunner.StartDialogue(dialogueNodes[2]);
+                    break;
+                case 9:
+                    this.dialogueRunner.StartDialogue(dialogueNodes[3]);
+                    break;
+                case 10:
+                    this.dialogueRunner.StartDialogue(dialogueNodes[4]);
+                    break;
+                default:
+                    this.dialogueRunner.StartDialogue("BattleEnd");
+                    break;
+            }
             rounds++;
-            this.dialogueRunner.StartDialogue("BattleEnd");
-            GoToShop();
+            if (rounds <= 10)
+            {
+                GoToShop();
+            }
+            else
+            {
+                GoToCredits();
+            }
         }
         else
         {
             this.dialogueRunner.StartDialogue("LoseDialog");
-            if(player.lives <= 0)
+            if (player.lives <= 0)
             {
                 GoToTitle();
             }
@@ -84,5 +113,10 @@ public class GameManager : MonoBehaviour
     public void GoToShop()
     {
         sceneLoader.LoadSpecificScene("shop");
+    }
+
+    public void GoToCredits()
+    {
+        sceneLoader.LoadSpecificScene("Credits");
     }
 }

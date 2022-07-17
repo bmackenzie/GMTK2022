@@ -282,6 +282,30 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 136378222461651957, guid: 8e8d9a08a80e23940ad0fbaaff73de62, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a1e376819954ef34a8e19307a16c677c, type: 3}
+    - target: {fileID: 136378222461651957, guid: 8e8d9a08a80e23940ad0fbaaff73de62, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 136378222461651957, guid: 8e8d9a08a80e23940ad0fbaaff73de62, type: 3}
+      propertyPath: m_Color.b
+      value: 0.08627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 136378222461651957, guid: 8e8d9a08a80e23940ad0fbaaff73de62, type: 3}
+      propertyPath: m_Color.g
+      value: 0.16862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 136378222461651957, guid: 8e8d9a08a80e23940ad0fbaaff73de62, type: 3}
+      propertyPath: m_Color.r
+      value: 0.36078432
+      objectReference: {fileID: 0}
+    - target: {fileID: 136378222461651957, guid: 8e8d9a08a80e23940ad0fbaaff73de62, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 136378222982915292, guid: 8e8d9a08a80e23940ad0fbaaff73de62, type: 3}
       propertyPath: m_fontAsset
       value: 

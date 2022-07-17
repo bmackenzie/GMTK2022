@@ -1364,7 +1364,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1540208828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1757,6 +1757,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 94405076673248172, guid: cf2eee3c3cc94c94d962b3422da2038c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131685379942958047, guid: cf2eee3c3cc94c94d962b3422da2038c, type: 3}
+      propertyPath: m_Name
+      value: BonusIcon
+      objectReference: {fileID: 0}
     - target: {fileID: 1131685380106392306, guid: cf2eee3c3cc94c94d962b3422da2038c, type: 3}
       propertyPath: m_Name
       value: DamageVisualEffects
@@ -1805,5 +1813,53 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1521508517709608379, guid: cf2eee3c3cc94c94d962b3422da2038c, type: 3}
+      propertyPath: m_fontSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521508517709608379, guid: cf2eee3c3cc94c94d962b3422da2038c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542373982115363737, guid: cf2eee3c3cc94c94d962b3422da2038c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724822307831515978, guid: cf2eee3c3cc94c94d962b3422da2038c, type: 3}
+      propertyPath: m_fontSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724822307831515978, guid: cf2eee3c3cc94c94d962b3422da2038c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7562002413465527503, guid: cf2eee3c3cc94c94d962b3422da2038c, type: 3}
+      propertyPath: faceEffectIconList.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 525f1557ebe114b4aa7fa5265785b89d, type: 3}
+    - target: {fileID: 7562002413465527503, guid: cf2eee3c3cc94c94d962b3422da2038c, type: 3}
+      propertyPath: faceEffectIconList.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: a584019498d505143afdf22773399200, type: 3}
+    - target: {fileID: 7562002413465527503, guid: cf2eee3c3cc94c94d962b3422da2038c, type: 3}
+      propertyPath: faceEffectIconList.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: c622af23f8b800549af1f8761bd2c834, type: 3}
+    - target: {fileID: 7562002413465527503, guid: cf2eee3c3cc94c94d962b3422da2038c, type: 3}
+      propertyPath: faceEffectIconList.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 5d316d5227550d74ab5ed603af53d746, type: 3}
+    - target: {fileID: 7562002413465527503, guid: cf2eee3c3cc94c94d962b3422da2038c, type: 3}
+      propertyPath: faceEffectIconList.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7c37db9a6b217a349b07d9a8ab398e15, type: 3}
+    - target: {fileID: 7562002413465527503, guid: cf2eee3c3cc94c94d962b3422da2038c, type: 3}
+      propertyPath: faceEffectIconList.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: bf04baf0631b8524bbaa260780d42ef6, type: 3}
+    - target: {fileID: 7562002413465527503, guid: cf2eee3c3cc94c94d962b3422da2038c, type: 3}
+      propertyPath: faceEffectIconList.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: ca3b12a04f2e69c4cb0f19b8b983130d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf2eee3c3cc94c94d962b3422da2038c, type: 3}

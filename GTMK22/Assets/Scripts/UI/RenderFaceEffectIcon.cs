@@ -31,4 +31,16 @@ public class RenderFaceEffectIcon : MonoBehaviour
         faceEffect = newEffect;
         GetComponent<Image>().sprite = faceEffectIconList[(int)faceEffect.bonusType - 1];
     }
+
+    public void UpdateCombatEffectShadow(int bnsType)
+    {
+        GetComponent<SpriteRenderer>().sprite = faceEffectIconList[bnsType - 1];
+        GetComponent<SpriteRenderer>().color = Color.black;
+        //GetComponent<SpriteRenderer>().transform.position += new Vector3(.1f, 0, 0);
+    }
+
+    public void UpdateCombatEffect(int bnsType)
+    {
+        GetComponent<SpriteRenderer>().sprite = faceEffectIconList[bnsType - 1];
+    }
 }

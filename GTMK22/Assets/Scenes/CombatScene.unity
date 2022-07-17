@@ -759,7 +759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   enemy: {fileID: 0}
-  updateSpeed: 1
+  updateSpeed: 10
 --- !u!4 &815379586
 Transform:
   m_ObjectHideFlags: 0

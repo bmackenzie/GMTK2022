@@ -75,13 +75,13 @@ public class CombatUIController : MonoBehaviour
 
     public void DrawEnemySummons()
     {
-        for (int i = 0; i < enemy.summons; i++)
-        {
+        //for (int i = 0; i < enemy.summons; i++)
+        //{
             
-            //Debug.Log("Enemy: " + i.ToString());
-            GameObject enemyIcon = Instantiate(enemySummonsPrefab);
-            enemyIcon.transform.position = new Vector3((float)(-((i-1)*(enemy.summons-1))+5), 0.0f, 0.0f);
-        }
+        //    //Debug.Log("Enemy: " + i.ToString());
+        //    GameObject enemyIcon = Instantiate(enemySummonsPrefab);
+        //    enemyIcon.transform.position = new Vector3((float)(-((i-1)*(enemy.summons-1))+5), 0.0f, 0.0f);
+        //}
     }
 
 
@@ -96,22 +96,17 @@ public class CombatUIController : MonoBehaviour
         speedIndex ++;
         speedIndex = speedIndex % 3;
         speedText.text = speeds[speedIndex].ToString() + "X";
-        battleManager.updateSpeed = speeds[speedIndex];
+        battleManager.updateSpeed = speeds[speedIndex]*4;
         return;
     }
 
-    //public void DrawAttackSymbol()
-    //{
-    //    //Debug.Log("started controller");
-    //    for (int lvs = 1; lvs <= player.maxLives; lvs++)
-    //    {
-    //        //.Log("Lives: " + lvs.ToString());
-    //        GameObject lifeIcon = Instantiate(lifesPrefab);
-    //        lifeIcon.transform.position += new Vector3((lvs - 1) * 1, 0, 0);
-    //        if (lvs > player.lives)
-    //        {
-    //            lifeIcon.GetComponent<SpriteRenderer>().color = Color.black;
-    //        }
-    //    }
-    //}
+    public void DrawAttackSymbol()
+    {
+        //Debug.Log("started controller");
+        if (attackAnimationComplete)
+        {
+
+        }
+
+    }
 }

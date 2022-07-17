@@ -13,18 +13,19 @@ public class Player : MonoBehaviour
     public int maxDice = 3;
     public List<Die> dice;
     public List<BonusGoop> bits;
+    private DieDatabase dieDatabase = new DieDatabase();
 
 
     public void Awake()
     {
         
         money = 0;
-        maxHealth = 100;
+        maxHealth = 50;
         maxLives = 6;
         ChangeHealth(maxHealth);
         //ChangeLives(maxLives);
         // Pick up a random starting bit
-        //this.bits.Add(DieLibrary.GetRandomGoop());
+        this.bits.Add(dieDatabase.GetRandomGoop());
     }
     void Start()
     {

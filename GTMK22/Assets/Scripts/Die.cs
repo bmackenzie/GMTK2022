@@ -8,7 +8,7 @@ public class Die : MonoBehaviour
     public int numSides = 4;
     public int[][] sideAction { get; private set; }
     public BonusGoop[] sideBonuses { get; private set; }
-
+    private DieDatabase dieDatabase = new DieDatabase();
     public SpriteRenderer slimeSprite;
     
 
@@ -30,7 +30,7 @@ public class Die : MonoBehaviour
             sideBonuses[i] = new BonusGoop((BonusTypes)0, 0, "nothing fancy");
         }
         // Randomly set a single side with a random bonus
-        sideBonuses[Random.Range(0, numSides - 1)] = new BonusGoop((BonusTypes)0, 0, "nothing fancy"); //DieLibrary.GetRandomGoop();
+        sideBonuses[Random.Range(0, numSides - 1)] = dieDatabase.GetRandomGoop();
 
     }
 

@@ -5,19 +5,7 @@ tags:
 <<set $lootIntro to true>>
 <<set $editIntro to true>>
 <<set $currentRound to 1>>
-Snooty Wizard: Hello, Fork-
-Fork: Uuuugh, not you again!
-Snooty Wizard: I wouldn't need to be here if you would follow proper procedure with form-
-Fork: Nononononononononon
-Fork: I don't want to hear paperwork talk!
-Snooty Wizard: Being a wizard include the occasional paperwork, which you would know if you were truly a wizard.
-Fork: No- wait, wait, wait. Do you doubt my wizard-ness?
-Snooty Wizard: In all my visits, you've yet to show anything even approximating talent.
-Fork: Wha- You take that back! I'm a great wizard! And Stinky, Fungus, and Mildew are the perfect summons!
-Snooty Wizard: You... Please tell me you are not referring to those hideous blobs.
-Fork: THAT DOES IT!!!
-Fork: Bring out your summons! You can't insult my goo-des and get away with it!
-Snooty Wizard: Ugh... Fine. But you'll still need to finish this paperwork.
+
 ===
 
 title: BattleEnd
@@ -43,20 +31,24 @@ tags:
 title: BattleStart
 tags: 
 ---
-<<if $currentRound == 2>>
+<<if $currentRound == 1>>
+    Snooty Wizard: Hello, Fork-
+    Fork: Uuuugh, not you again!
+    Snooty Wizard: I wouldn't need to be here if you would follow proper procedure with form-
+    Fork: Nononononononononon
+    Fork: I don't want to hear paperwork talk!
+    Snooty Wizard: Being a wizard include the occasional paperwork, which you would know if you were truly a wizard.
+    Fork: No- wait, wait, wait. Do you doubt my wizard-ness?
+    Snooty Wizard: In all my visits, you've yet to show anything even approximating talent.
+    Fork: Wha- You take that back! I'm a great wizard! And Stinky, Fungus, and Mildew are the perfect summons!
+    Snooty Wizard: You... Please tell me you are not referring to those hideous blobs.
+    Fork: THAT DOES IT!!!
+    Fork: Bring out your summons! You can't insult my goo-des and get away with it!
+    Snooty Wizard: Ugh... Fine. But you'll still need to finish this paperwork.
+<<elseif $currentRound == 2>>
     Snooty Wizard: Fork, time to-
     Fork: AAAAH NO!!!!
     Snooty Wizard: Eeeeek!! Keep those slimes away from me!!
-<<endif>>
-===
-
-title: LootStart
-tags: 
----
-<<if $lootIntro == true>>
-    Fork: Oooooh, your little pets left something behind!
-    Fork: Better not grab too much though or they might get suspicious...
-    <<set $lootIntro = false>>
 <<endif>>
 ===
 

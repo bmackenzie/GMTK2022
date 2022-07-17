@@ -228,8 +228,8 @@ public class BattleManager : DialoguePauser
                     wasAttacked = true;
                     break;
             }
-            Instantiate(damageVisualEffectsPrefab, new Vector3(-2, 0, 0), Quaternion.identity);
-            animator.UpdateDamageNumbers(action[0],action[1],action[2]);
+            //Instantiate(damageVisualEffectsPrefab, new Vector3(-2, 0, 0), Quaternion.identity);
+            //animator.UpdateDamageNumbers(action[0],action[1],action[2]);
 
         }
         else
@@ -299,9 +299,9 @@ public class BattleManager : DialoguePauser
                     wasAttacked = true;
                     break;
             }
-            Debug.Log("made it here");
-            Instantiate(damageVisualEffectsPrefab, new Vector3(2, 0, 0), Quaternion.identity);
-            animator.UpdateDamageNumbers(action[0],action[1],action[2]);
+            //Debug.Log("made it here");
+            //Instantiate(damageVisualEffectsPrefab, new Vector3(2, 0, 0), Quaternion.identity);
+            //animator.UpdateDamageNumbers(action[0],action[1],action[2]);
         }
         else
         {

@@ -24,20 +24,10 @@ public class DieDatabase
 public BonusGoop GetRandomGoop()
     {
         int bonus = UnityEngine.Random.Range(0, effects.Length);
-        Debug.Log("bonus");
-        Debug.Log(bonus);
         int mag_ind = UnityEngine.Random.Range(0, effects[bonus].magnitudes.Length );
-        Debug.Log("mag ind");
-        Debug.Log(mag_ind);
         int mag = effects[bonus].magnitudes[mag_ind].value;
-        Debug.Log("mag");
-        Debug.Log(mag);
         int rel = effects[bonus].magnitudes[mag_ind].dieRelation;
-        Debug.Log("rel");
-        Debug.Log(rel);
         string descript = Regex.Replace(effects[bonus].description, "{magnitude}", effects[bonus].magnitudes[mag_ind].description);
-        Debug.Log("description");
-        Debug.Log(descript);
         return new BonusGoop((BonusTypes)bonus+1, mag, rel, descript);
     }
 }

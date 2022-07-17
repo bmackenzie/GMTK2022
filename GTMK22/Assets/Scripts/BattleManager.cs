@@ -14,7 +14,7 @@ public class BattleManager : DialoguePauser
     private bool isEnemyDead = false;
     private bool isPlayerDead = false;
     private int updateFlag = 0;
-    public int updateSpeed = 10;
+    public int updateSpeed = 100;
 
     private int enemyPoison = 0;
     private int enemyThorn = 0;
@@ -44,8 +44,8 @@ public class BattleManager : DialoguePauser
         switch (gameManager.rounds)
         {
             case 1:
-                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyBase.prefab", typeof(GameObject)));
-                Debug.Log("loaded Enemy Base prefab");
+                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyBoss.prefab", typeof(GameObject)));
+                Debug.Log("loaded Enemy Boss prefab");
                 break;
             case 2:
                 test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyDodge.prefab", typeof(GameObject)));
@@ -190,7 +190,7 @@ public class BattleManager : DialoguePauser
                     break;
                 case 5: //self stun attack
                     playerSkipTurn = true;
-                    isEnemyDead = enemy.ChangeHealth(-enemyPoison);
+                    isEnemyDead = enemy.ChangeHealth(-action[2]);
                     break;
                 case 6: //increase damage
                     playerStrength += action[2];
@@ -211,7 +211,7 @@ public class BattleManager : DialoguePauser
 
         if (playerPoison > 0)
         {
-            player.ChangeHealth(-playerPoison);
+            isPlayerDead = player.ChangeHealth(-playerPoison);
             playerPoison -= 1;
         }
         if (wasAttacked)
@@ -224,6 +224,7 @@ public class BattleManager : DialoguePauser
 
     void TakeEnemyTurn()
     {
+        Debug.Log("Taking enemy turn");
         if (!enemySkipTurn)
         {
             action = enemy.TakeTurn();
@@ -241,27 +242,39 @@ public class BattleManager : DialoguePauser
             switch (action[1])
             {
                 case 0:
+                    Debug.Log("BORING");
                     break;
                 case 1:
                     playerPoison += action[2];
+                    Debug.Log("add poison");
                     break;
                 case 2: //thorn buff
                     enemyThorn += action[2];
+                    Debug.Log("add thorns");
+
                     break;
                 case 3: //Damage Reduction Buff
                     enemyDamageReduce += action[2];
+                    Debug.Log("reduce damage");
                     break;
                 case 4: //Dodge Buff
                     enemyDodgeTurn += action[2];
+                    Debug.Log("dodge");
+
                     break;
                 case 5: //self stun attack
                     enemySkipTurn = true;
-                    isPlayerDead = player.ChangeHealth(-playerPoison);
+                    Debug.Log("beeg attack");
+                    isPlayerDead = player.ChangeHealth(-action[2]);
                     break;
                 case 6: //damage boost
                     enemyStrength += action[2];
+                    Debug.Log("buff strength");
+
                     break;
                 case 7: //additional attacks
+                    Debug.Log("Multi");
+
                     for (int i = 0; i < action[2]; i++)
                     {
                         HurtPlayer(attackStrength);
@@ -297,7 +310,7 @@ public class BattleManager : DialoguePauser
         }
         else
         {
-            player.ChangeHealth(damage);
+            isPlayerDead = player.ChangeHealth(damage);
             if (playerThorn > 0)
             {
                 isEnemyDead = enemy.ChangeHealth(-playerThorn);

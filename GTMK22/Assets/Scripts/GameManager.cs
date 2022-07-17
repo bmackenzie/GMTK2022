@@ -100,6 +100,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
+                Debug.Log("Should be going to the shop");
                 GoToShop();
             }
         }

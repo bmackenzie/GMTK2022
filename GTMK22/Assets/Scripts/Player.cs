@@ -69,6 +69,28 @@ public class Player : MonoBehaviour
         }
     }
 
+    public Die GetDieDetails(int numSides)
+    {
+        foreach(Die die in this.dice)
+        {
+            if(die.numSides == numSides)
+            {
+                return die;
+            }
+        }
+        return null;
+    }
+
+    public void UpdateDieDetails(int numSides, Die newDetails)
+    {
+        for(int i = 0; i < this.dice.Count; i++)
+        {
+            if(this.dice[i].numSides == numSides)
+            {
+                this.dice[i] = newDetails;
+            }
+        }
+    }
     public void AddDie(Die newDie, int position)
     {
         if (position > maxDice -1)

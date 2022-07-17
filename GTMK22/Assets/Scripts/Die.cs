@@ -62,7 +62,7 @@ public class Die : MonoBehaviour
         Debug.Log(currentFace);
         Debug.Log((int)currentAction.bonusType);
         Debug.Log(currentAction.magnitude);
-        return new int[] {currentFace, (int)currentAction.bonusType, currentAction.magnitude};
+        return new int[] {currentFace+1, (int)currentAction.bonusType, currentAction.magnitude};
     }
 
     void Merge(Die secondDie, Die thirdDie)

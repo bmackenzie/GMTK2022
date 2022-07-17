@@ -14,7 +14,7 @@ public class BattleManager : DialoguePauser
     private bool isEnemyDead = false;
     private bool isPlayerDead = false;
     private int updateFlag = 0;
-    public int updateSpeed = 1;
+    public int updateSpeed = 10;
 
     private int enemyPoison = 0;
     private int enemyThorn = 0;
@@ -43,37 +43,59 @@ public class BattleManager : DialoguePauser
         player = FindObjectOfType<Player>();
         switch (gameManager.rounds)
         {
-            case 0:
+            case 1:
                 test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyBase.prefab", typeof(GameObject)));
                 Debug.Log("loaded Enemy Base prefab");
                 break;
-            case 1:
-                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyScaling.prefab", typeof(GameObject)));
-                break;
             case 2:
-                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyThorns.prefab", typeof(GameObject)));
+                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyDodge.prefab", typeof(GameObject)));
+                Debug.Log("loaded Enemy Dodge prefab");
+
                 break;
             case 3:
-                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyHeavy.prefab", typeof(GameObject)));
+                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyThorns.prefab", typeof(GameObject)));
+                Debug.Log("loaded Enemy Thorns prefab");
+
                 break;
             case 4:
-                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyPoison.prefab", typeof(GameObject)));
+                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyHeavy.prefab", typeof(GameObject)));
+                Debug.Log("loaded Enemy Heavy prefab");
+
                 break;
             case 5:
-                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyBase.prefab", typeof(GameObject)));
+                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyScaling.prefab", typeof(GameObject)));
+                Debug.Log("loaded Enemy Scaling prefab");
+
                 break;
             case 6:
-                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Enemy6.prefab", typeof(GameObject)));
+                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyPoison.prefab", typeof(GameObject)));
+                Debug.Log("loaded Enemy Poison prefab");
+
                 break;
             case 7:
-                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyTank.prefab", typeof(GameObject)));
+                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Enemy6.prefab", typeof(GameObject)));
+                Debug.Log("loaded Enemy 6 prefab");
+
                 break;
             case 8:
-                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyMulti.prefab", typeof(GameObject)));
+                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyTank.prefab", typeof(GameObject)));
+                Debug.Log("loaded Enemy Tank prefab");
+
                 break;
             case 9:
-                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyBoss.prefab", typeof(GameObject)));
+                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyMulti.prefab", typeof(GameObject)));
+                Debug.Log("loaded Enemy Multi prefab");
+
                 break;
+            case 10:
+                test1 = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath("Assets/Prefabs/EnemyBoss.prefab", typeof(GameObject)));
+                Debug.Log("loaded Enemy Boss prefab");
+
+                break;
+            default:
+                Debug.Log("sould not be here");
+                break;
+
         }
         enemy = FindObjectOfType<Enemy>();
     }
@@ -284,6 +306,8 @@ public class BattleManager : DialoguePauser
         else
         {
             isEnemyDead = enemy.ChangeHealth(damage);
+            Debug.Log("Enemy Health");
+            Debug.Log(enemy.health);
             if (enemyThorn > 0)
             {
                 isPlayerDead = player.ChangeHealth(-enemyThorn);

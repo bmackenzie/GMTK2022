@@ -61,6 +61,12 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void SetStartingHealth()
+    {
+        health = maxHealth;
+    }
+        
+
     public bool ChangeMoney(int changeValue)
     {
         if (money + changeValue < 0)

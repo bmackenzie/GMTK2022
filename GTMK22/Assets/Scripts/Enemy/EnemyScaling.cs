@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyScaling : Enemy
 {
-    private int scaleFactor = 5;
+    private int scaleFactor = 2;
     private int scaleCount = 0;
 
     public override void Start()
@@ -22,7 +22,7 @@ public class EnemyScaling : Enemy
         scaleCount++;
         if (scaleCount%scaleFactor == 0)
         {
-            return new int[] { 0, 6 , 1};
+            return new int[] { damage, 6 , 1};
         }
         else
         {

@@ -16,7 +16,7 @@ public class DamageVisualEffects : MonoBehaviour
     public RenderFaceEffectIcon renderFaceEffecIcon;
     public RenderFaceEffectIcon renderFaceEffecIconShadow;
     
-    void Start()
+    void Awake()
     {
         //textObject = thisBlock.transform.GetChild(1).gameObject;
         //var damageText = this.GetComponentsInChildren<TextMeshPro>();
@@ -48,8 +48,11 @@ public class DamageVisualEffects : MonoBehaviour
     baseDamageText.text = baseDamage.ToString();
     bonusDamageText.text = bonusDamage.ToString();
     bonusDamageText.color = effectColors[bonusType];
-    renderFaceEffecIconShadow.UpdateCombatEffectShadow(bonusType-1);
-    renderFaceEffecIcon.UpdateCombatEffect(bonusType-1);
+    if(bonusType != 0)
+    {
+        renderFaceEffecIconShadow.UpdateCombatEffectShadow(bonusType);
+        renderFaceEffecIcon.UpdateCombatEffect(bonusType);
+    }
 
 
     }

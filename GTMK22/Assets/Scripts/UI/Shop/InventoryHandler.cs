@@ -6,6 +6,8 @@ public class InventoryHandler : MonoBehaviour
 {
     private List<BonusGoop> inventoryList;
     public List<RenderFaceEffectIcon> inventoryUI;
+    public List<RenderFaceEffectIcon> lootList;
+    private DieDatabase dieDatabase = new DieDatabase();
     // Start is called before the first frame update
     private void Awake()
     {
@@ -20,6 +22,10 @@ public class InventoryHandler : MonoBehaviour
             {
                 inventoryUI[i].MakeEmpty();
             }
+        }
+        for(int i = 0; i < lootList.Count; i++)
+        {
+            lootList[i].UpdateFaceEffect(dieDatabase.GetRandomGoop());
         }
     }
     void Start()

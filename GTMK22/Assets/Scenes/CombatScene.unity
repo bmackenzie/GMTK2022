@@ -761,15 +761,15 @@ MonoBehaviour:
   enemy: {fileID: 0}
   updateSpeed: 10
   e1: {fileID: 6375554147409524239, guid: 376d6b77c4f501c4f90ef2d36f29bf2a, type: 3}
-  e2: {fileID: 0}
-  e3: {fileID: 0}
-  e4: {fileID: 0}
-  e5: {fileID: 0}
-  e6: {fileID: 0}
-  e7: {fileID: 0}
-  e8: {fileID: 0}
-  e9: {fileID: 0}
-  e10: {fileID: 0}
+  e2: {fileID: 1425739752728991842, guid: 007da99d8864efa4aa0d4e439d61a461, type: 3}
+  e3: {fileID: 8920273846019603591, guid: 701813b47624ca44ea02cea8b85e3d67, type: 3}
+  e4: {fileID: 1297447733976858328, guid: 82558789ed0b8b7439811319ce312fb4, type: 3}
+  e5: {fileID: 5940446772512339242, guid: 47b509ff1d95ac142952bf9218abedf1, type: 3}
+  e6: {fileID: 8155950190056394321, guid: 5cc430550a7143247b23c238842923d2, type: 3}
+  e7: {fileID: 7297986075951323224, guid: ef00f532d0d027047baf4a7a1d7a878b, type: 3}
+  e8: {fileID: 524770240815503774, guid: 76c70187e6df37849933254d865cb20d, type: 3}
+  e9: {fileID: 3940213597173582845, guid: ba95846479bec9f46adc399a9bdf83d1, type: 3}
+  e10: {fileID: 9099071078669150433, guid: ce3c2fde73a56c24faece3f3f3cd583e, type: 3}
 --- !u!4 &815379586
 Transform:
   m_ObjectHideFlags: 0

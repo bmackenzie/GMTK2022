@@ -57,56 +57,56 @@ public class BattleManager : DialoguePauser
                 Debug.Log("loaded Enemy Base prefab");
                 break;
             case 2:
-                e1 = Instantiate(e1, this.transform) as GameObject;
-                e1.transform.position += new Vector3(3, -2, 0);
+                e2 = Instantiate(e1, this.transform) as GameObject;
+                e2.transform.position += new Vector3(3, -2, 0);
                 Debug.Log("loaded Enemy Dodge prefab");
 
                 break;
             case 3:
-                e1 = Instantiate(e1, this.transform) as GameObject;
-                e1.transform.position += new Vector3(3, -2, 0);
+                e3 = Instantiate(e1, this.transform) as GameObject;
+                e3.transform.position += new Vector3(3, -2, 0);
                 Debug.Log("loaded Enemy Thorns prefab");
 
                 break;
             case 4:
-                e1 = Instantiate(e1, this.transform) as GameObject;
-                e1.transform.position += new Vector3(3, -2, 0);
+                e4 = Instantiate(e1, this.transform) as GameObject;
+                e4.transform.position += new Vector3(3, -2, 0);
                 Debug.Log("loaded Enemy Heavy prefab");
 
                 break;
             case 5:
-                e1 = Instantiate(e1, this.transform) as GameObject;
-                e1.transform.position += new Vector3(3, -2, 0);
+                e5 = Instantiate(e1, this.transform) as GameObject;
+                e5.transform.position += new Vector3(3, -2, 0);
                 Debug.Log("loaded Enemy Scaling prefab");
 
                 break;
             case 6:
-                e1 = Instantiate(e1, this.transform) as GameObject;
-                e1.transform.position += new Vector3(3, -2, 0);
+                e6 = Instantiate(e1, this.transform) as GameObject;
+                e6.transform.position += new Vector3(3, -2, 0);
                 Debug.Log("loaded Enemy Poison prefab");
 
                 break;
             case 7:
-                e1 = Instantiate(e1, this.transform) as GameObject;
-                e1.transform.position += new Vector3(3, -2, 0);
+                e7 = Instantiate(e1, this.transform) as GameObject;
+                e7.transform.position += new Vector3(3, -2, 0);
                 Debug.Log("loaded Enemy 6 prefab");
 
                 break;
             case 8:
-                e1 = Instantiate(e1, this.transform) as GameObject;
-                e1.transform.position += new Vector3(3, -2, 0);
+                e8 = Instantiate(e1, this.transform) as GameObject;
+                e8.transform.position += new Vector3(3, -2, 0);
                 Debug.Log("loaded Enemy Tank prefab");
 
                 break;
             case 9:
-                e1 = Instantiate(e1, this.transform) as GameObject;
-                e1.transform.position += new Vector3(3, -2, 0);
+                e9 = Instantiate(e1, this.transform) as GameObject;
+                e9.transform.position += new Vector3(3, -2, 0);
                 Debug.Log("loaded Enemy Multi prefab");
 
                 break;
             case 10:
-                e1 = Instantiate(e1, this.transform) as GameObject;
-                e1.transform.position += new Vector3(3, -2, 0);
+                e10 = Instantiate(e1, this.transform) as GameObject;
+                e10.transform.position += new Vector3(3, -2, 0);
                 Debug.Log("loaded Enemy Boss prefab");
 
                 break;

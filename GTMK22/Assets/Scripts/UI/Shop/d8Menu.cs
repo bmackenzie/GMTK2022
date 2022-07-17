@@ -168,5 +168,7 @@ public class d8Menu : MonoBehaviour
         //update the die with the ActiveFace GameObject
         slimeDetails.sideBonuses[position] = activeFace.GetComponent<RenderFaceEffectIcon>().faceEffect;
         slimeDetails.sideBonuses[position].SetMagnitude(position);
+        Destroy(activeFace);
+        CloseMenu();
     }
 }

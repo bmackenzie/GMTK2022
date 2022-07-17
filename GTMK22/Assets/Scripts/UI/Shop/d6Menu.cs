@@ -83,7 +83,8 @@ public class d6Menu : MonoBehaviour
     public void CloseMenu()
     {
         gameObject.SetActive(false);
-        slimeDetails = slime.slimeDetails;
+        slime.slimeDetails = slimeDetails;
+        slime.UpdateHoverText();
     }
 
     public void Slot1Click()

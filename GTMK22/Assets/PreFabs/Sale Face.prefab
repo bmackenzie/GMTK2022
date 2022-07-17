@@ -86,6 +86,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 170836877730638962}
+  - component: {fileID: 2824302785394350884}
   - component: {fileID: 170836877730638862}
   - component: {fileID: 170836877730638961}
   - component: {fileID: 170836877730638963}
@@ -119,6 +120,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0.000011444, y: -1.7}
   m_SizeDelta: {x: 42.16, y: 42.16}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2824302785394350884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170836877730638965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fad066457e28cb4bb3f36f7ff52c550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faceEffectIconList:
+  - {fileID: 21300000, guid: 525f1557ebe114b4aa7fa5265785b89d, type: 3}
+  - {fileID: 21300000, guid: a584019498d505143afdf22773399200, type: 3}
+  - {fileID: 21300000, guid: c622af23f8b800549af1f8761bd2c834, type: 3}
+  - {fileID: 21300000, guid: 5d316d5227550d74ab5ed603af53d746, type: 3}
+  - {fileID: 21300000, guid: 7c37db9a6b217a349b07d9a8ab398e15, type: 3}
+  - {fileID: 21300000, guid: ca3b12a04f2e69c4cb0f19b8b983130d, type: 3}
+  - {fileID: 21300000, guid: bf04baf0631b8524bbaa260780d42ef6, type: 3}
 --- !u!222 &170836877730638862
 CanvasRenderer:
   m_ObjectHideFlags: 0

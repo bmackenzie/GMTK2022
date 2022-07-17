@@ -117,6 +117,14 @@ public class Player : MonoBehaviour
         dice.RemoveAt(position);
     }
 
+    public void RemoveInventoryItem(BonusGoop item)
+    {
+        if(bits.Contains(item))
+        {
+            bits.Remove(item);
+        }
+    }
+
     public void HideSlimes()
     {
         for(int i = 0; i < this.dice.Count; i++)

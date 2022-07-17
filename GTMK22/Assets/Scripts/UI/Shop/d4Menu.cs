@@ -66,7 +66,8 @@ public class d4Menu : MonoBehaviour
     public void CloseMenu()
     {
         gameObject.SetActive(false);
-        slimeDetails = slime.slimeDetails;
+        slime.slimeDetails = slimeDetails;
+        slime.UpdateHoverText();
     }
 
     public void Slot1Click()
@@ -95,6 +96,7 @@ public class d4Menu : MonoBehaviour
         //slimeDetails.sideBonuses[position] = activeFace.GetComponent<RenderFaceEffectIcon>().faceEffect;
         //slimeDetails.sideBonuses[position].SetMagnitude(position);
         slimeDetails.ChangeSide(position, activeFace.GetComponent<RenderFaceEffectIcon>().faceEffect);
+        FindObjectOfType<Player>().RemoveInventoryItem(activeFace.GetComponent<RenderFaceEffectIcon>().faceEffect);
         Destroy(activeFace);
         CloseMenu();
     }

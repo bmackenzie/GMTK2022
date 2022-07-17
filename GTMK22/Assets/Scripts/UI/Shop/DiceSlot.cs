@@ -8,7 +8,7 @@ public class DiceSlot : MonoBehaviour, IDropHandler
 {
     public int numSides;
     public TMPro.TMP_Text hoverTextObject;
-    private Die slimeDetails;
+    public Die slimeDetails;
 
     void Awake()
     {

@@ -5,17 +5,19 @@ tags:
 <<set $lootIntro to true>>
 <<set $editIntro to true>>
 <<set $currentRound to 1>>
-Rival: Ooooh, yoo hoooooooo~
-Fork: Uuuugh, she's here AGAIN
-
-Fork: I'm a wizard too!! I'm the mighty slime-uner!
-
--> I'll show them how powerful I am!
-    Fork: Those gizmos I found should knock those geezers in bathrobes off their game!
--> I need to give myself some sort of edge...
-    Fork: Maybe I can add those gizmos I found to my creature summoning for an extra boost...
-
-Fork: Gonna put my name in the cauldron and beat those jerks at their own tourney!
+Snooty Wizard: Hello, Fork-
+Fork: Uuuugh, not you again!
+Snooty Wizard: I wouldn't need to be here if you would follow proper procedure with form-
+Fork: Nononononononononon
+Fork: I don't want to hear paperwork talk!
+Snooty Wizard: Being a wizard include the occasional paperwork, which you would know if you were truly a wizard.
+Fork: No- wait, wait, wait. Do you doubt my wizard-ness?
+Snooty Wizard: In all my visits, you've yet to show anything even approximating talent.
+Fork: Wha- You take that back! I'm a great wizard! And Stinky, Fungus, and Mildew are the perfect summons!
+Snooty Wizard: You... Please tell me you are not referring to those hideous blobs.
+Fork: THAT DOES IT!!!
+Fork: Bring out your summons! You can't insult my goo-des and get away with it!
+Snooty Wizard: Ugh... Fine. But you'll still need to finish this paperwork.
 ===
 
 title: BattleEnd
@@ -52,7 +54,9 @@ title: SetupStart
 tags: 
 ---
 <<if $editIntro == true>>
-    Fork: I bet these bits of goop I found will fit on my gizmo...
+    Fork: Hmph, I have a great workshop!
+    Fork: Besides, her summon left behind some pretty good pieces.
+    Fork: Let's see how I can add them into the gizmos running my slime boys.
     <<set $editIntro = false>>
 <<endif>>
 ===
@@ -60,7 +64,11 @@ tags:
 title: Round1End
 tags:
 ---
-Fork: Haha! Take that, beardy!
+Fork: Hah! I told you we'd win!
+Snooty Wizard: Mmm... yes. I suppose you did beat the summon I use for training apprentices.
+Fork: What- APPRENTIC-
+Snooty Wizard: But, a win is a win. I suppose I will return another day about the paperwork.
+Snooty Wizard: Perhaps you might consider cleaning up your workspace in the mean time?
 <<set $currentRound to $currentRound + 1>>
 ===
 

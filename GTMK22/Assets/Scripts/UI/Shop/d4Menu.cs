@@ -99,5 +99,6 @@ public class d4Menu : MonoBehaviour
     void UpdateFace(int position)
     {
         //update the die with the ActiveFace GameObject
+        slimeDetails.sideBonuses[position] = activeFace.GetComponent<RenderFaceEffectIcon>().faceEffect;
     }
 }
